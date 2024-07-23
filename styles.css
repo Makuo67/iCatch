@@ -1,0 +1,412 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 15%;
+    background: #ffff;
+    color: #101928;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    /* position: fixed; */
+
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li a {
+    color:#454545;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background: #F9FAFB;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+input[type="search"] {
+    padding: 8px;
+    margin-right: 350px;
+    width: 600px;
+    border: 0.5px solid #ccc;
+    border-radius: 4px;
+}
+
+.welcome-message-and-date-wigdet{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.date-widget {
+    margin-right: 20px;
+    display: inline-flex;
+    padding: 16px 20px;
+    border: 1px solid var(--Grey-200, #E4E7EC);
+    background: #FFF;
+    display: flex;
+    justify-content: space-between;
+}
+
+.metrics-container {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 24px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.metric-card {
+    background: #fff;
+    border: 1px solid var(--Grey-200, #E4E7EC);
+    border-radius: 12px;
+    gap: 20px;
+    padding: 30px;
+    text-align: center;
+    width: 230px 110;
+}
+
+.value {
+    font-size: 12px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.icon-container {
+    margin: 6px 0;
+}
+
+.icon-container img {
+    width: 40px;
+    height: 40px;
+}
+
+.status {
+    font-size: 8px;
+    color: #4CAF50; 
+    font-weight: bold;
+}
+
+.status .percentage {
+    background: #D4E9D6; 
+    padding: 3px 6px;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.profile-card {
+    background: #fff;
+    border: 1px solid var(--Grey-200, #E4E7EC);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+}
+
+.profile-header {
+    padding: 20px;
+    text-align: center;
+    border: 1px solid var(--Grey-200, #E4E7EC);
+}
+
+.profile-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profile-info h1 {
+    margin: 0;
+    color: #333;
+}
+
+.profile-info p {
+    color: #666;
+    margin: 5px 0 10px;
+}
+
+.profile-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    background: #f9f9f9;
+}
+
+.detail {
+    flex-basis: 30%;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.detail strong {
+    display: block;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.status.active {
+    color: #4CAF50; /* Green color for active status */
+    font-weight: bold;
+}
+
+/* Consultation */
+
+.consultation-card {
+    width: 350px;
+    background: #fff;
+    border: 1px solid var(--Grey-200, #E4E7EC);
+    border-radius: 12px;
+    padding: 20px;
+    
+}
+
+.consultation-card h2 {
+    text-align: center;
+    color: #333;
+}
+
+.appointment-details {
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    padding-bottom: 80px;
+}
+
+.date {
+    font-weight: bold;
+}
+
+.time-location p, .doctor-details p {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    margin-right: 10px;
+    width: 20px; 
+    height: 20px; 
+}
+
+.doctor-details {
+    display: flex;
+    align-items: center;
+}
+
+.doctor-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.reschedule {
+    background: #f0f0f0;
+    color: #333;
+}
+
+.confirm {
+    background: #EB5017;
+    color: white;
+}
+
+.metrics-container-and-profile-card{
+    width: 720px;
+}
+
+.metrics-container-and-profile-card-and-consultation-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+
+.quick-actions {
+    width: 450px;
+    background: #fff;
+    padding: 30px;
+    border: 1px solid var(--Grey-200, #E4E7EC);
+    margin-top: 30px;
+    border-radius: 12px;
+}
+
+.quick-actions h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.quick-actions ul {
+    list-style: none;
+    padding: 0;
+}
+
+.quick-actions li {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.quick-actions li:last-child {
+    border-bottom: none;
+}
+
+
+.icon img {
+    width: 42px;
+    height: 42px;
+}
+
+.text p {
+    margin: 0;
+    font-weight: bold;
+    margin-left: 12px;
+}
+
+.text small {
+    color: #666;
+    margin-left: 12px;
+}
+
+.arrow {
+    margin-left: auto;
+    font-size: 18px;
+    color: #333;
+}
+
+.quick-actions-and-consultations-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.consultations-container {
+    width: 600px;
+    margin: auto;
+    border: 1px solid var(--Grey-200, #E4E7EC);
+    border-radius: 12px;
+    margin-top: 30px;
+    padding: 12px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header h2 {
+    font-size: 18px;
+    color: #333;
+}
+
+header button {
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: white;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.consultations-container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.consultations-container li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.consultations-container li:first-child {
+    border-top: none;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile div h3 {
+    margin: 0;
+    color: #333;
+    font-size: 16px;
+}
+
+.profile div p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+li button {
+    padding: 5px 10px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.time-location {
+    padding: none;
+}

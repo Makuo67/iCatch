@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="dashboard-container">
+
+<!-- Left Sidebar Navigation -->
+<div class="sidebar">
+    <div class="logo">
+        <img src="" alt="Logo">
+    </div>
+
+    <nav class="top-nav">
+        <ul>
+            <li><a href="./index.html">Dashboard</a></li>
+            <li><a href="./consultdoctor.html">Consult a Doctor</a></li>
+            <li><a href="./appointment.html">Appointments</a></li>
+            <li><a href="./myhospitals.html">My Hospitals</a></li>
+        </ul>
+    </nav>
+    <nav class="bottom-nav">
+        <ul>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Refer Family & Friends</a></li>
+        </ul>
+    </nav>
+</div>
+
+
+
+<!-- Right Dashboard Information -->
+<div class="main-content">
+        <div class="top-bar">
+            <div>
+                <input type="search" id="searchInput" placeholder="Search here..." aria-label="Search"> 
+            </div>
+
+            <div class="profile">
+                <img src="./images/profile.jpg" alt="Profile Picture">
+            </div>
+            <div>
+                <img src="./images/notification-icon.png" alt="Notifications" class="notification-icon">
+            </div>
+            
+        </div>
+
+        <div class="welcome-message-and-date-wigdet">
+
+            <div class="welcome-message">
+            <h1>Welcome Ademola</h1>
+            <p>It's a sunny day today, we hope you're taking good care of your health 😊</p>
+            </div>
+
+            <div class="date-widget">
+                <div>
+                    Today's Date:
+                    <div> <span id="currentDate"></span> </div> 
+                </div> 
+            </div>
+
+        </div>
+        <div>
+
+<div class="metrics-container-and-profile-card-and-consultation-card">            
+  <div class="metrics-container-and-profile-card">         
+    <div class="metrics-container">
+            <div class="metric-card">
+                <h4>Blood pressure</h4>
+                <p class="value">118/75 mm/hg</p>
+                <div class="icon-container"><img src="./images/Blood.png" alt="Blood Pressure"></div>
+                <div class="status healthy"><span class="percentage">5%</span> Healthy</div>
+            </div>
+    
+            <div class="metric-card">
+                <h4>Cholesterol levels</h4>
+                <p class="value">164 mg/dl</p>
+                <div class="icon-container"><img src="./images/Cholesterol.png" alt="Cholesterol"></div>
+                <div class="status healthy"><span class="percentage">5%</span> Healthy</div>
+            </div>
+    
+            <div class="metric-card">
+                <h4>Glucose levels</h4>
+                <p class="value">5.5 mmol/L</p>
+                <div class="icon-container"><img src="./images/Glucose.png" alt="Glucose"></div>
+                <div class="status healthy"><span class="percentage">5%</span> Healthy</div>
+            </div>
+    </div>
+       
+        <div class="profile-card">
+            <div class="profile-header">
+                <img src="./images/profile.jpg" alt="Ademola Emmanuel" class="profile-image">
+                <div class="profile-info">
+                    <h1>Ademola Emmanuel</h1>
+                    <p>HMO ID: RET/15118/A</p>
+                </div>
+            </div>
+            <div class="profile-details">
+                <div class="detail"><strong>Age</strong><span>26 y/o</span></div>
+                <div class="detail"><strong>Date of Birth</strong><span>15-05-1994</span></div>
+                <div class="detail"><strong>Height</strong><span>6'7 In</span></div>
+                <div class="detail"><strong>Weight</strong><span>80 kg</span></div>
+                <div class="detail"><strong>HMO Plan</strong><span>Red Beryl</span></div>
+                <div class="detail"><strong>Expires on</strong><span>24-07-2024</span></div>
+                <div class="detail"><strong>Status</strong><span class="status active">Active</span></div>
+            </div>
+
+        </div>
+  </div>  
+       
+        <div class="consultation-card">
+            <h2>Upcoming Consultations</h2>
+            <div class="appointment-details">
+                <p class="date">Friday, 6 July</p>
+                <div class="time-location">
+                    <p><span class="icon time-icon"></span>11:30 - 12:00 (30 min)</p>
+                    <p><span class="icon location-icon"></span>Cottage Medicare Hospital, 18 Iwaya Rd, Yaba 101245, Lagos</p>
+                </div>
+                <div class="doctor-details">
+                    <img src="./images/Avatar.png" alt="Dr. Alison Ogaga" class="doctor-image">
+                    <div>
+                        <p class="doctor-name">Dr. Alison Ogaga</p>
+                        <p class="specialization">General Practitioner</p>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="reschedule">Reschedule</button>
+                <button class="confirm">Confirm appointment</button>
+            </div>
+        </div>
+</div>
+<div class="quick-actions-and-consultations-container">
+
+ <div class="quick-actions">
+    <h2>Quick Actions</h2>
+    <ul>
+        <li>
+            <span class="icon"><img src="./images/Appiontment Icon.png" alt="Book"></span>
+            <div class="text">
+                <p>Book an Appointment</p>
+                <small>Find a doctor and specialization</small>
+            </div>
+            <span class="arrow">&gt;</span>
+        </li>
+        <li>
+            <span class="icon"><img src="./images/Request Icon.png" alt="Consult"></span>
+            <div class="text">
+                <p>Request Consultation</p>
+                <small>Talk to a specialist</small>
+            </div>
+            <span class="arrow">&gt;</span>
+        </li>
+        <li>
+            <span class="icon"><img src="./images/Location Icon.png" alt="Locate"></span>
+            <div class="text">
+                <p>Locate a hospital near you</p>
+                <small>Find closest hospitals</small>
+            </div>
+            <span class="arrow">&gt;</span>
+        </li>
+        <li>
+            <span class="icon"><img src="./images/Emergency Logo.png" alt="Emergency"></span>
+            <div class="text">
+                <p>Emergency</p>
+                <small>Request immediate help</small>
+            </div>
+            <span class="arrow">&gt;</span>
+        </li>
+    </ul>
+    </div>
+    <div class="consultations-container">
+        <header>
+            <h2>Recent Consultations</h2>
+            <button>See all</button>
+        </header>
+        <ul class="">
+            <li>
+                <div class="profile">
+                    <img src="./images/Avatar.png" alt="Dr. Ndinelao Litumba">
+                    <div>
+                        <h3>Dr. Alison Ogaga</h3>
+                        <p>General Practitioner</p>
+                    </div>
+                </div>
+                <button>Send a message</button>
+            </li>
+            <!-- Repeat for other doctors -->
+            <li>
+                <div class="profile">
+                    <img src="./images/Avatar.png" alt="Dr. Ndinelao Litumba">
+                    <div>
+                        <h3>Dr. Jennifer Johnson</h3>
+                        <p>Primary Care Physician</p>
+                    </div>
+                </div>
+                <button>Send a message</button>
+            </li>
+            <!-- Additional list items for Dr. Anish Patel, Dr. Samuel Smith, Dr. Lily Chen -->
+            <li>
+                <div class="profile">
+                    <img src="./images/Avatar.png" alt="Dr. Ndinelao Litumba">
+                    <div>
+                        <h3>Dr. Jennifer Johnson</h3>
+                        <p>Primary Care Physician</p>
+                    </div>
+                </div>
+                <button>Send a message</button>
+            </li>
+            <!-- Additional list items for Dr. Anish Patel, Dr. Samuel Smith, Dr. Lily Chen -->
+            <li>
+                <div class="profile">
+                    <img src="./images/Avatar.png" alt="Dr. Ndinelao Litumba">
+                    <div>
+                        <h3>Dr. Jennifer Johnson</h3>
+                        <p>Primary Care Physician</p>
+                    </div>
+                </div>
+                <button>Send a message</button>
+            </li>
+            <!-- Additional list items for Dr. Anish Patel, Dr. Samuel Smith, Dr. Lily Chen -->
+            <li>
+                <div class="profile">
+                    <img src="./images/Avatar.png" alt="Dr. Ndinelao Litumba">
+                    <div>
+                        <h3>Dr. Jennifer Johnson</h3>
+                        <p>Primary Care Physician</p>
+                    </div>
+                </div>
+                <button>Send a message</button>
+            </li>
+            <!-- Additional list items for Dr. Anish Patel, Dr. Samuel Smith, Dr. Lily Chen -->
+        </ul>
+ </div>
+    
+</div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>

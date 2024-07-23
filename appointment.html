@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./appointment.css">
+</head>
+<body>
+  <div class="dashboard-container">
+
+        <!-- Left Sidebar Navigation -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="" alt="Logo">
+            </div>
+    
+            <nav class="top-nav">
+                <ul>
+                    <li><a href="./index.html">Dashboard</a></li>
+                    <li><a href="./consultdoctor.html">Consult a Doctor</a></li>
+                    <li><a href="./appointment.html">Appointments</a></li>
+                    <li><a href="./myhospitals.html">My Hospitals</a></li>
+                </ul>
+            </nav>
+            <nav class="bottom-nav">
+                <ul>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Refer Family & Friends</a></li>
+                </ul>
+            </nav>
+        </div>
+    
+    
+    
+        <!-- Right Dashboard Information -->
+    <div class="main-content">
+
+        <div class="top-bar">
+            <div>
+                <input type="search" id="searchInput" placeholder="Search here..." aria-label="Search"> 
+            </div>
+
+            <div class="profile">
+                <img src="./images/profile.jpg" alt="Profile Picture">
+            </div>
+            <div>
+                <img src="./images/notification-icon.png" alt="Notifications" class="notification-icon">
+            </div>    
+        </div>
+
+        <div class="header-container">
+            <div class="text-container">
+                <h2> My Appointments </h2>
+                <p>Check and filter all your medical appointments here</p>
+            </div>
+            <div class="button-container">
+
+                <div class="button-container">
+                    <a href="./newappointment.html" class="button-link"> + New Appointment</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="tabs">
+            <div class="tab active">
+                <span class="icon">+</span>
+                <span class="text">All Visits</span>
+                <span class="count">0</span>
+            </div>
+            <div class="tab">
+                <span class="icon">📅</span>
+                <span class="text">Upcoming Visits</span>
+                <span class="count">0</span>
+            </div>
+            <div class="tab">
+                <span class="icon">❌</span>
+                <span class="text">Canceled Visits</span>
+                <span class="count">0</span>
+            </div>
+        </div>
+
+        <div class="app-container">
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <button class="nav-btn prev-month">⟨</button>
+                    <h2 class="month-year">July 2023</h2>
+                    <button class="nav-btn next-month">⟩</button>
+                </div>
+                <div class="day-names">
+                    <span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span><span>Su</span>
+                </div>
+                <div class="dates" id="dates"></div>
+                <div class="appointment-details">
+                    <div class="time">11:30 - 12:00 (30 min)</div>
+                    <div class="doctor-info">
+                        <h3>Dr. Alison Ogaga</h3>
+                        <p>Cottage Medicare Hospital, 18 Iwaya Rd, Yaba 101245, Lagos</p>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="visit-table">
+                <div class="visit-header">
+                    <div class="header-cell">Name</div>
+                    <div class="header-cell">Address</div>
+                    <div class="header-cell">Date and time</div>
+                </div>
+                <div class="visit-row">
+                    <div class="cell name">
+                        <img src="./images/Avatar.png" alt="Dr. Ndinelao Litumba">
+                        <span>Dr. Alison Ogaga<br><small>General Practioner</small></span>
+                    </div>
+                    <div class="cell address">
+                        <span>Cottage Medicare Hospital<br>18 Iwaya Rd, Yaba 101245, Lagos</span>
+                    </div>
+                    <div class="cell date-time">
+                        <span>6 Jul, 2023 1:00 PM</span>
+                    </div>
+                </div>
+                <!-- Repeat .visit-row for each entry -->
+                <div class="visit-row">
+                    <div class="cell name">
+                        <img src="./images/Avatar.png" alt="Dr. Ndinelao Litumba">
+                        <span>Dr. Alison Ogaga<br><small>General Practioner</small></span>
+                    </div>
+                    <div class="cell address">
+                        <span>Cottage Medicare Hospital<br>18 Iwaya Rd, Yaba 101245, Lagos</span>
+                    </div>
+                    <div class="cell date-time">
+                        <span>6 Jul, 2023 1:00 PM</span>
+                    </div>
+                </div>
+                 <!-- Repeat .visit-row for each entry -->
+                 <div class="visit-row">
+                    <div class="cell name">
+                        <img src="./images/Avatar.png" alt="Dr. Ndinelao Litumba">
+                        <span>Dr. Alison Ogaga<br><small>General Practioner</small></span>
+                    </div>
+                    <div class="cell address">
+                        <span>Cottage Medicare Hospital<br>18 Iwaya Rd, Yaba 101245, Lagos</span>
+                    </div>
+                    <div class="cell date-time">
+                        <span>6 Jul, 2023 1:00 PM</span>
+                    </div>
+                </div> <!-- Repeat .visit-row for each entry -->
+                <div class="visit-row">
+                    <div class="cell name">
+                        <img src="./images/Avatar.png" alt="Dr. Ndinelao Litumba">
+                        <span>Dr. Alison Ogaga<br><small>General Practioner</small></span>
+                    </div>
+                    <div class="cell address">
+                        <span>Cottage Medicare Hospital<br>18 Iwaya Rd, Yaba 101245, Lagos</span>
+                    </div>
+                    <div class="cell date-time">
+                        <span>6 Jul, 2023 1:00 PM</span>
+                    </div>
+                </div> <!-- Repeat .visit-row for each entry -->
+                <div class="visit-row">
+                    <div class="cell name">
+                        <img src="./images/Avatar.png" alt="Dr. Ndinelao Litumba">
+                        <span>Dr. Alison Ogaga<br><small>General Practioner</small></span>
+                    </div>
+                    <div class="cell address">
+                        <span>Cottage Medicare Hospital<br>18 Iwaya Rd, Yaba 101245, Lagos</span>
+                    </div>
+                    <div class="cell date-time">
+                        <span>6 Jul, 2023 1:00 PM</span>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+        
+        
+        
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

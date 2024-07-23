@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 160px; 
+    margin: 60px;
+    background: #FFF; 
+    box-shadow: 0px 4px 100px 0px rgba(168, 168, 168, 0.05); 
+    width: auto; 
+    box-sizing: border-box;
+}
+
+.input-group {
+    width: 100%; /* Full width within the container for alignment */
+    position: relative; /* Setup for potentially positioning other elements like icons */
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px; /* Adds space below each input field */
+    border: 1px solid #ccc; /* Subtle border styling */
+    border-radius: 5px; /* Slight rounding of corners to match the container */
+    box-sizing: border-box; /* Ensures padding does not affect the overall width */
+}
+
+input[type="checkbox"] {
+    margin-right: 10px; /* Space between checkbox and label */
+}
+
+.login-button, .google-login {
+    width: 100%;
+    padding: 12px 120px 12px 120px;
+    border: none;
+    border-radius: 8px;
+    background-color: #EB5017;
+    color: white;
+    cursor: pointer;
+    margin-top: 24px;
+}
+
+.login-button:hover, .google-login:hover {
+    background-color: #C03F14; /* Slightly darker orange on hover for feedback */
+}
+
+.divider {
+    text-align: center;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    line-height: 0.1em;
+    margin: 20px 0 20px;
+}
+
+.divider span {
+    background: #FFF;
+    padding: 0 10px;
+}
+
+.alternative {
+    text-align: center;
+    margin-top: 20px; /* Space above the alternative link */
+}
+
+a {
+    color: #EB5017;
+    text-decoration: none; /* Removes underline from links for a cleaner look */
+}
+
+a:hover {
+    text-decoration: underline; /* Adds underline on hover for link recognition */
+}

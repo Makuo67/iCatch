@@ -1,0 +1,210 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+   
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 15%;
+    background: #ffff;
+    color: #101928;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li a {
+    color:#454545;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background: #F9FAFB;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+input[type="search"] {
+    padding: 8px;
+    margin-right: 350px;
+    width: 600px;
+    border: 0.5px solid #ccc;
+    border-radius: 4px;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: none;
+    padding-top: 30px;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.text-container p {
+    margin: 0;
+    font-size: 18px; 
+}
+
+.button-link {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 10px;
+    background-color: #EB5017;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.button-link:hover {
+    background-color: #ef4507;
+}
+
+
+.tabs {
+    display: flex;
+    font-family: Arial, sans-serif;
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-right: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tab .icon {
+    margin-right: 10px;
+}
+
+.tab .text {
+    flex-grow: 1;
+    align-items: center;
+    margin-right: 12px;
+}
+
+.tab .count {
+    background-color: white;
+    color: #FF5733;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+.tab.active {
+    background-color: #F7CAC9; 
+    color: #333;
+}
+
+.tab:not(.active) {
+    background-color: #f0f0f0; 
+    color: #666;
+}
+
+.tab:last-child {
+    margin-right: 0;
+}
+
+.consultation-table {
+    width: 100%;
+    font-family: Arial, sans-serif;
+    padding-top: 30px;
+}
+
+.table-row {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.table-row.header {
+    font-weight: bold;
+    background-color: #f2f2f2;
+}
+
+.column {
+    flex: 1;
+    padding: 5px;
+}
+
+.name {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.info .name {
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.info .title {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+    padding: 0;
+}
+
+.column.conversation p {
+    margin: 4px 0;
+    color: #333;
+}
+
+.column.date-time p {
+    text-align: left;
+    margin: 7px 0px;
+}
+

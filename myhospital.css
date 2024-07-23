@@ -1,0 +1,189 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+   
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 15%;
+    background: #ffff;
+    color: #101928;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li a {
+    color:#454545;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background: #F9FAFB;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+input[type="search"] {
+    padding: 8px;
+    margin-right: 350px;
+    width: 600px;
+    border: 0.5px solid #ccc;
+    border-radius: 4px;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: none;
+    padding-top: 30px;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.text-container p {
+    margin: 0;
+    font-size: 18px; 
+}
+
+.button-container button {
+    background-color: #FF5733; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-container button:hover {
+    background-color: #E04E2A; 
+}
+
+.tabs {
+    display: flex;
+    font-family: Arial, sans-serif;
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-right: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tab .icon {
+    margin-right: 10px;
+}
+
+.tab .text {
+    flex-grow: 1;
+    margin-right: 12px;
+}
+
+.tab .count {
+    background-color: white;
+    color: #FF5733;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+.tab.active {
+    background-color: #F7CAC9; 
+    color: #333;
+}
+
+.tab:not(.active) {
+    background-color: #f0f0f0; 
+    color: #666;
+}
+
+.tab:last-child {
+    margin-right: 0;
+}
+
+.hospital-list {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    max-width: 1100px; 
+    margin-top: 20px;
+    border-collapse: collapse;
+    box-shadow: 0 2px 4px rgba(176, 176, 176, 0.1); 
+}
+
+.list-header, .list-row {
+    display: grid;
+    grid-template-columns: 25% 40% 20% 10%; 
+    text-align: left;
+    padding: 8px;
+}
+
+.list-header {
+    background-color: #f5f4f4;
+    font-weight: bold;
+    padding: 20px;
+    border: 0.2px solid var(--Grey-200, #E4E7EC);
+}
+
+.list-row {
+    background-color: #fff;
+    padding: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #eee; 
+}
+
+.list-row span {
+    display: block; 
+    overflow: hidden; 
+    white-space: nowrap; 
+    text-overflow: ellipsis; 
+}
+
+.ratings {
+    font-family: Arial, sans-serif; 
+    color: #FFA500; 
+}
+
+
