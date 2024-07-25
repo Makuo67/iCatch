@@ -142,8 +142,8 @@ input[type="search"] {
 }
 
 .doctor-photo {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
 }
 
@@ -154,27 +154,28 @@ input[type="search"] {
 
 .profile-info h1 {
     margin: 0;
-    font-size: 24px;
+    font-size: 28px;
 }
 
 .ratings span {
     color: #f39c12;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .profile-info p {
     margin: 5px 0;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .request-button {
-    background-color: #e67e22;
+    background-color: #F96731;
     color: #fff;
-    padding: 10px 20px;
+    padding: 16px 24px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-size: 16px;
 }
 
 .request-button:hover {
