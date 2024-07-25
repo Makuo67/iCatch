@@ -43,6 +43,7 @@ body, html {
     flex-grow: 1;
     padding: 20px;
     background: #F9FAFB;
+    width: 85%;
 }
 
 .top-bar {

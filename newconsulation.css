@@ -43,6 +43,7 @@ body, html {
     flex-grow: 1;
     padding: 20px;
     background: #F9FAFB;
+    width: 85%;
 }
 
 .top-bar {
@@ -89,7 +90,7 @@ input[type="search"] {
 
 .nav-header {
     display: flex;
-    width: 1200px;
+    width: 1100px;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
@@ -138,7 +139,7 @@ input[type="search"] {
 }
 
 .container {
-    width: 100%;
+    width: 85%;
     max-width: 1200px;
     margin: 0 auto;
     background-color: #fff;

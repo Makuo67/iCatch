@@ -68,8 +68,15 @@ input[type="search"] {
     margin-right: 10px;
 }
 
+
+.nav-header-text-container{
+    display: flex;
+    flex-direction: column;
+}
+
 .nav-header {
     display: flex;
+    width: 1200px;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
@@ -78,6 +85,7 @@ input[type="search"] {
     color: #333;
     border: 0.2px solid #ccc;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .back-button, .search-button, .filter-button {
@@ -90,11 +98,11 @@ input[type="search"] {
 
 .header-title {
     font-size: 16px;
-    color: #ff4500; /* Orange color for the header title */
+    color: #ff4500; 
 }
 
 .plus-icon {
-    color: #ff4500; /* Matching the title color */
+    color: #ff4500;
     margin-right: 5px;
 }
 
@@ -102,82 +110,112 @@ input[type="search"] {
     margin-left: 10px;
 }
 
-/* Styling specifically for icon texts */
 .search-button:before, .filter-button:before {
     font-weight: 900;
 }
 
 .search-button:before {
-    content: '\f002'; /* Unicode for Font Awesome's search icon */
+    content: '\f002'; 
     margin-right: 5px;
 }
 
 .filter-button:before {
-    content: '\f0b0'; /* Unicode for Font Awesome's filter icon */
+    content: '\f0b0'; 
     margin-right: 5px;
 }
 
-.consultation-table {
-    width: 100%;
-    font-family: Arial, sans-serif;
-    padding-top: 30px;
-}
 
-.table-row {
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid #ccc;
-    padding: 10px;
+.profile-container {
+    width: 95%;
+    margin-top: 30px;
     background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
 
-.table-row.header {
-    font-weight: bold;
-    background-color: #f2f2f2;
-}
-
-.column {
-    flex: 1;
-    padding: 5px;
-}
-
-.name {
+.profile-header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
-.profile-pic {
-    width: 60px;
-    height: 60px;
+.doctor-photo {
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    margin-right: 10px;
 }
 
-.info .name {
+.profile-info {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.profile-info h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.ratings span {
+    color: #f39c12;
+    font-size: 20px;
+}
+
+.profile-info p {
+    margin: 5px 0;
     font-size: 16px;
-    color: #333;
-    margin: 0;
+}
+
+.request-button {
+    background-color: #e67e22;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.request-button:hover {
+    background-color: #d35400;
+}
+
+.profile-body {
+    padding: 20px 0;
+}
+
+.profile-body h2 {
+    margin: 0 0 10px;
+}
+
+.profile-body p {
+    line-height: 1.6;
+}
+
+.profile-sections {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.profile-section {
+    width: 30%;
+}
+
+.profile-section h3 {
+    margin-bottom: 10px;
+}
+
+.profile-section ul {
+    list-style: none;
     padding: 0;
-}
-
-.info .title {
-    font-size: 14px;
-    color: #666;
     margin: 0;
-    padding: 0;
 }
 
-.column.conversation p {
-    margin: 6px 0;
-    color: #333;
-}
-
-.column.date-time p {
-    text-align: left;
-    margin: 7px 0px;
-}
-
-.ratings {
-    font-family: Arial, sans-serif; 
-    color: #FFA500; 
+.profile-section ul li {
+    background-color: #f4f4f4;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 5px;
 }
