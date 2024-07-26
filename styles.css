@@ -18,14 +18,20 @@ body, html {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    /* position: fixed; */
+    transition: background-color 0.3s, color 0.3s;
+    
 
 }
 
+.sidebar-link:hover,
+.sidebar-item.active .sidebar-link {
+    background-color: #ffebee;
+    color: #e53935;
+}
+
 .logo img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+    width: 120px;
+    height: 50px;
     margin-bottom: 10px;
 }
 

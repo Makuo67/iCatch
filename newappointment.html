@@ -12,7 +12,7 @@
         <!-- Left Sidebar Navigation -->
         <div class="sidebar">
             <div class="logo">
-                <img src="" alt="Logo">
+                <img src="./images/Logo.png" alt="Logo">
             </div>
     
             <nav class="top-nav">
@@ -61,119 +61,95 @@
                 </div>
             </div>
 
-            <div class="consultation-table">
-                <div class="table-row header">
-                    <div class="column name">Name</div>
-                    <div class="column conversation">Address</div>
-                    <div class="column date-time">Ratings</div>
-                </div>
-                <!-- Repeat this row for each doctor's consultation -->
-                <div class="table-row">
-                    <div class="column name">
-                        <img src="./images/Avatar.png" alt="Dr. Ndinelao Litumba" class="profile-pic">
-                        <div class="info">
-                            <p class="name">Dr. Ndinelao Litumba</p>
-                            <p class="title">General Practitioner</p>
-                        </div>
-                    </div>
-                    <div class="column conversation">
-                        <p> <b> Cottage Medicare Hospital </b></p>
-                        <p>17, Bamidele Street, Osapa London, Lekki, Lagos</p>
-                    </div>
-                    <div class="column date-time">
-                        <span class="ratings">
-                            <!-- Icons for stars -->
-                            ★★★★★
-                        </span>
-                    </div>
-                </div>
-                <!-- Repeat for other entries -->
-                 <!-- Repeat this row for each doctor's consultation -->
-                <div class="table-row">
-                    <div class="column name">
-                        <img src="./images/Avatar.png" alt="Dr. Ndinelao Litumba" class="profile-pic">
-                        <div class="info">
-                            <p class="name">Dr. Alison Ogaga</p>
-                            <p class="title">General Practitioner</p>
-                        </div>
-                    </div>
-                    <div class="column conversation">
-                        <p> <b> Cottage Medicare Hospital </b></p>
-                        <p>17, Bamidele Street, Osapa London, Lekki, Lagos</p>
-                    </div>
-                    <div class="column date-time">
-                        <span class="ratings">
-                            <!-- Icons for stars -->
-                            ★★★★★
-                        </span>
-                    </div>
-                </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Ratings</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr onclick="window.location.href='doctorprofile.html'">
+                        <td>
+                            <div class="doctor-info">
+                                <img src="./images/Avatar.png" alt="Dr. Alison Ogaga">
+                                <div>
+                                    <p>Dr. Alison Ogaga</p>
+                                    <p>General Practitioner</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Cottage Medicare Hospital, 18 Iwaya Rd, Lagos</td>
+                        <td>
+                            <div class="ratings">
+                                <span>★★★★★</span>
+                            </div>
+                        </td>
+                        <td><button class="request-button">View Profile</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="doctor-info">
+                                <img src="./images/Avatar.png" alt="Dr. Jennifer Johnson">
+                                <div>
+                                    <p>Dr. Jennifer Johnson</p>
+                                    <p>Primary Care Physician</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Blue Cross Hospital, 48, Ijaiye Road, Ogba, Lagos</td>
+                        <td>
+                            <div class="ratings">
+                                <span>★★★★★</span>
+                            </div>
+                        </td>
+                        <td><button class="request-button">View Profile</button></td>
+                    </tr>
 
-                <!-- Repeat for other entries -->
-         
-                <div class="table-row">
-                    <div class="column name">
-                        <img src="./images/Avatar.png" alt="Dr. Ndinelao Litumba" class="profile-pic">
-                        <div class="info">
-                            <p class="name">Dr. Ndinelao Litumba</p>
-                            <p class="title">General Practitioner</p>
-                        </div>
-                    </div>
-                    <div class="column conversation">
-                        <p> <b> Cottage Medicare Hospital </b></p>
-                        <p>17, Bamidele Street, Osapa London, Lekki, Lagos</p>
-                    </div>
-                    <div class="column date-time">
-                        <span class="ratings">
-                            <!-- Icons for stars -->
-                            ★★★★★
-                        </span>
-                    </div>
-                </div>
-                <!-- Repeat for other entries -->
-               
-                <div class="table-row">
-                    <div class="column name">
-                        <img src="./images/Avatar.png" alt="Dr. Ndinelao Litumba" class="profile-pic">
-                        <div class="info">
-                            <p class="name">Dr. Ndinelao Litumba</p>
-                            <p class="title">General Practitioner</p>
-                        </div>
-                    </div>
-                    <div class="column conversation">
-                        <p> <b> Cottage Medicare Hospital </b></p>
-                        <p>17, Bamidele Street, Osapa London, Lekki, Lagos</p>
-                    </div>
-                    <div class="column date-time">
-                         <span class="ratings">
-                    <!-- Icons for stars -->
-                    ★★★★★
-                        </span>
-                    </div>
-                </div>
-                <!-- Repeat for other entries -->
-                
-                <div class="table-row">
-                    <div class="column name">
-                        <img src="./images/Avatar.png" alt="Dr. Ndinelao Litumba" class="profile-pic">
-                        <div class="info">
-                            <p class="name">Dr. Ndinelao Litumba</p>
-                            <p class="title">General Practitioner</p>
-                        </div>
-                    </div>
-                  <div class="column conversation">
-                        <p> <b> Cottage Medicare Hospital </b></p>
-                        <p>17, Bamidele Street, Osapa London, Lekki, Lagos</p>
-                    </div>
-                    <div class="column date-time">
-                        <span class="ratings">
-                            <!-- Icons for stars -->
-                            ★★★★★
-                        </span>
-                    </div>
-                </div>
-              
-            </div>
+                    <tr>
+                        <td>
+                            <div class="doctor-info">
+                                <img src="./images/Avatar.png" alt="Dr. Jennifer Johnson">
+                                <div>
+                                    <p>Dr. Jennifer Johnson</p>
+                                    <p>Primary Care Physician</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Blue Cross Hospital, 48, Ijaiye Road, Ogba, Lagos</td>
+                        <td>
+                            <div class="ratings">
+                                <span>★★★★★</span>
+                            </div>
+                        </td>
+                        <td><button class="request-button">View Profile</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="doctor-info">
+                                <img src="" alt="Dr. Jennifer Johnson">
+                                <div>
+                                    <p>Dr. Jennifer Johnson</p>
+                                    <p>Primary Care Physician</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Blue Cross Hospital, 48, Ijaiye Road, Ogba, Lagos</td>
+                        <td>
+                            <div class="ratings">
+                                <span>★★★★★</span>
+                            </div>
+                        </td>
+                        <td><button class="request-button">View Profile</button></td>
+                    </tr>
+
+                     
+                    <!-- Repeat for other doctors -->
+                </tbody>
+            </table>
             
 
 

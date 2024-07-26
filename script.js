@@ -46,3 +46,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
     loadCalendarDays(currentMonth, currentYear); // Load current month
 });
+
