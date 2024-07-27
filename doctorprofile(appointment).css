@@ -22,6 +22,30 @@ body, html {
 
 }
 
+/* Styling for the navigation links */
+.top-nav ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.top-nav a {
+    display: block;
+    color: black; /* Text color */
+    text-decoration: none; /* No underline */
+    padding: 10px 20px;
+}
+
+/* Hover effect */
+.top-nav a:hover {
+    background-color: #fff3ef; /* Lighter grey on hover */
+}
+
+/* Active link styling */
+.top-nav .active {
+    background-color: #f4581f; /* Change to desired color for active state */
+    color: white; /* Change text color for active state */
+}
+
 .logo img {
     width: 120px;
     height: 50px;

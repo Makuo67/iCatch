@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="bookappointment.css">
+    <link rel="stylesheet" href="requestconsultation.css">
 </head>
 
 <body>
@@ -25,6 +25,7 @@
                     <li><a href="./appointment.html">Appointments</a></li>
                     <li><a href="./myhospitals.html">My Hospitals</a></li>
                 </ul>
+
             </nav>
             <nav class="bottom-nav">
                 <ul>
@@ -51,7 +52,7 @@
             </div>
 
             <div class="container">
-                <h1>Schedule an Appointment</h1>
+                <h1>Request Consultation</h1>
                 <form id="appointment-form">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
@@ -68,13 +69,14 @@
                     <label for="reason">Reason for Appointment:</label>
                     <input type="text" id="reason" name="reason" class="special-input" required>
 
-                    <button type="submit">Schedule Appointment</button>
+                    <button type="submit">Request Consultation</button>
                 </form>
 
                 <div id="confirmation" class="hidden">
-                    <h2>Appointment Scheduled</h2>
+                    <h2>Consultation Request Successfully</h2>
                     <p>Thank you for scheduling an appointment.</p>
-                    <button id="another-appointment">Schedule Another</button>
+
+                    <button id="back-home">Go Home</button>
                 </div>
             </div>
 
