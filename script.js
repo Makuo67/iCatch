@@ -1,17 +1,6 @@
-function togglePasswordVisibility() {
-    var passwordInput = document.getElementById('password');
-    var button = passwordInput.nextElementSibling;
-    if (passwordInput.type === 'password') {
-        passwordInput.type = 'text';
-        button.textContent = 'Hide';
-    } else {
-        passwordInput.type = 'password';
-        button.textContent = 'Show';
-    }
-}
-document.addEventListener('DOMContentLoaded', function() {
-    const currentDate = new Date().toLocaleDateString('en-US', { 
-        weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' 
+document.addEventListener('DOMContentLoaded', function () {
+    const currentDate = new Date().toLocaleDateString('en-US', {
+        weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
     });
     document.getElementById('currentDate').textContent = currentDate;
 });
@@ -20,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const currentDate = new Date();
     const currentMonth = currentDate.getMonth();
     const currentYear = currentDate.getFullYear();
-    
+
     function loadCalendarDays(month, year) {
         const daysContainer = document.getElementById('dates');
         daysContainer.innerHTML = ''; // Clear previous cells
@@ -47,3 +36,21 @@ document.addEventListener('DOMContentLoaded', function () {
     loadCalendarDays(currentMonth, currentYear); // Load current month
 });
 
+
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('appointment-form');
+    const confirmation = document.getElementById('confirmation');
+    const anotherAppointmentBtn = document.getElementById('another-appointment');
+
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        form.classList.add('hidden');
+        confirmation.classList.remove('hidden');
+    });
+
+    anotherAppointmentBtn.addEventListener('click', function () {
+        form.reset();
+        form.classList.remove('hidden');
+        confirmation.classList.add('hidden');
+    });
+});

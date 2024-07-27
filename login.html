@@ -5,10 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Login Page</title>
 <link rel="stylesheet" href="login.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
 </head>
 <body>
+
 <div class="login-container">
-    <form action="/submit-your-login-form" method="POST">
+    <form id="login-form">
         <div class="input-group">
             <input type="email" id="email" name="email" required placeholder="E-mail">
         </div>
@@ -21,6 +24,51 @@
         <button type="button" class="google-login">Continue with Gmail</button>
     </form>
 </div>
-<script src="script.js"></script>
+
+
+<script> 
+
+function togglePasswordVisibility() {
+    var passwordInput = document.getElementById('password');
+    var button = passwordInput.nextElementSibling;
+    if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        button.textContent = 'Hide';
+    } else {
+        passwordInput.type = 'password';
+        button.textContent = 'Show';
+    }
+}
+const supabaseUrl = 'https://cgwfbohodsudyhyuuxwa.supabase.co';
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNnd2Zib2hvZHN1ZHloeXV1eHdhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjIwNjU1NzYsImV4cCI6MjAzNzY0MTU3Nn0.oLlmLnpGf09Edemcw8k8XanluU8wehFmTQ44HSg3dtM';
+const client = supabase.createClient(supabaseUrl, supabaseKey);
+
+document.getElementById('login-form').addEventListener('submit', async function (event) {
+    event.preventDefault(); // Prevent the form from submitting the traditional way
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+
+    try {
+        // Step 3: Call Supabase signUp function and handle response
+        const { data, error } = await client.auth.signInWithPassword({
+            email: email,
+            password: password,
+        });
+
+        if (error) {
+            console.error('Error:', error.message);
+            alert('Sign up failed: ' + error.message);
+        } else {
+            console.log('Sign up successful:', data);
+            alert('Login In successful!');
+            window.location.href = '/index.html';
+        }
+    } catch (error) {
+        console.error('Unexpected error:', error);
+        alert('An unexpected error occurred: ' + error.message);
+    }
+});
+</script>
+
 </body>
 </html>
