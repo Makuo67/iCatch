@@ -79,10 +79,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         // Update the profile name with the user's full name
         profileNameElement.textContent = userName;
     }
-
-
-
-
+    
     // Check if the user object exists and has the full_name property
     if (user && user.user_metadata.first_name) {
         // updateWelcomeMessage("Ademola");

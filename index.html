@@ -72,6 +72,12 @@
 
             try {
 
+                // Function to validate email format
+                function validateEmail(email) {
+                    const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+                    return re.test(String(email).toLowerCase());
+                }
+
                 // Function to check if passwords match
                 function validatePasswords() {
                     if (passwordInput.value !== confirmPasswordInput.value) {
@@ -81,12 +87,15 @@
                     return true;
                 }
 
+
+                if (!validateEmail(email)) {
+                    alert('Please enter a valid email address.');
+                    return; // Stop the sign-up process if the email is invalid
+                }
+
                 if (!validatePasswords()) {
                     return; // Stop the sign-up process if the passwords do not match
                 }
-
-
-
 
 
                 signupForm.addEventListener('submit', function (event) {
@@ -97,9 +106,9 @@
 
 
                 // Assuming fullname is a string like "John Doe"
-                const names = fullname.split(' '); 
-                const firstName = names[0]; 
-                const lastName = names.slice(1).join(' '); 
+                const names = fullname.split(' ');
+                const firstName = names[0];
+                const lastName = names.slice(1).join(' ');
 
                 const { data, error } = await client.auth.signUp({
                     email: email,
