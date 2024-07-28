@@ -2,6 +2,9 @@ body {
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
+    background-image: url('./images/Background\ Image.png'); /* Replace with your image path */
+    background-size: cover; /* Cover the entire page */
+    background-position: center; /* Center the background image */
     align-items: center;
     height: 100vh;
     background-color: #f4f4f4;
@@ -58,4 +61,10 @@ input[type="email"], input[type="password"] {
 
 a {
     color: #EB5017; 
+}
+
+.logo img {
+    width: 240px;
+    height: 100px;
+    margin-bottom: 30px;
 }

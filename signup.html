@@ -12,6 +12,9 @@
 
 <body>
     <div class="signup-container">
+        <div class="logo">
+            <img src="./images/Logo.png" alt="Logo">
+        </div>
         <form id="signup-form">
             <div class="input-group">
                 <input type="text" id="fullname" name="fullname" required placeholder="Full Name">
@@ -78,7 +81,14 @@
                     return true;
                 }
 
-                
+                if (!validatePasswords()) {
+                    return; // Stop the sign-up process if the passwords do not match
+                }
+
+
+
+
+
                 signupForm.addEventListener('submit', function (event) {
                     if (!validatePasswords()) {
                         event.preventDefault(); // Prevent form submission if passwords do not match

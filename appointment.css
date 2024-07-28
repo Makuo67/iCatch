@@ -37,7 +37,7 @@ body, html {
 
 /* Hover effect */
 .top-nav a:hover {
-    background-color: #fff3ef; /* Lighter grey on hover */
+    background-color: #fff3ef; 
 }
 
 /* Active link styling */

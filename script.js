@@ -15,10 +15,14 @@ document.addEventListener('DOMContentLoaded', function() {
             link.classList.add('active');
 
             // Navigate to the link's href
-            window.location.href = link.href;
+            window.location.href = 'index.html';
+            window.location.href = 'consultdoctor.html';
+            window.location.href = 'appointment.html';
+            window.location.href = 'myhospitals.html';
         });
     });
 });
+
 
 
 
