@@ -36,7 +36,7 @@
 
 
     <script>
-        
+
         const supabaseUrl = 'https://cgwfbohodsudyhyuuxwa.supabase.co';
         const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNnd2Zib2hvZHN1ZHloeXV1eHdhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjIwNjU1NzYsImV4cCI6MjAzNzY0MTU3Nn0.oLlmLnpGf09Edemcw8k8XanluU8wehFmTQ44HSg3dtM';
         const client = supabase.createClient(supabaseUrl, supabaseKey);
@@ -59,7 +59,7 @@
                 } else {
                     console.log('Sign up successful:', data);
                     alert('Login In successful!');
-                    window.location.href = '/index.html';
+                    window.location.href = '/dashboard.html';
                 }
             } catch (error) {
                 console.error('Unexpected error:', error);
