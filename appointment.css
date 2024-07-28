@@ -32,8 +32,8 @@ body, html {
 
 .top-nav a {
     display: block;
-    color: black; /* Text color */
-    text-decoration: none; /* No underline */
+    color: black;
+    text-decoration: none; 
     padding: 10px 20px;
 }
 
@@ -44,7 +44,7 @@ body, html {
 
 /* Active link styling */
 .appointments {
-    background-color: #FFECE5; /* Change to desired color for active state */
+    background-color: #FFECE5; 
 }
 
 .logo img {
@@ -161,12 +161,12 @@ input[type="search"] {
 }
 
 .tab.active {
-    background-color: #F7CAC9; /* Peach color for active tab */
+    background-color: #F7CAC9; 
     color: #333;
 }
 
 .tab:not(.active) {
-    background-color: #f0f0f0; /* Light gray for inactive tabs */
+    background-color: #f0f0f0; 
     color: #666;
 }
 
@@ -230,7 +230,7 @@ input[type="search"] {
 
 .dates {
     display: grid;
-    grid-template-columns: repeat(7, 1fr); /* Creates a grid layout with 7 columns */
+    grid-template-columns: repeat(7, 1fr); 
     gap: 5px;
     padding: 10px;
 }
@@ -308,7 +308,7 @@ input[type="search"] {
 }
 
 .cell.name, .cell.address {
-    flex: 1; /* Gives more space to name and address */
+    flex: 1; 
     display: flex;
     flex-direction: row;
     align-content: center;

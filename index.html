@@ -95,10 +95,21 @@
                     }
                 });
 
+
+                // Assuming fullname is a string like "John Doe"
+                const names = fullname.split(' '); 
+                const firstName = names[0]; 
+                const lastName = names.slice(1).join(' '); 
+
                 const { data, error } = await client.auth.signUp({
-                    fullname: fullname,
                     email: email,
                     password: password,
+                    options: {
+                        data: {
+                            first_name: firstName,
+                            last_name: lastName
+                        }
+                    }
                 });
 
 

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>New Consultation</title>
     <link rel="stylesheet" href="newconsulation.css">
 </head>
+
 <body>
     <div class="dashboard-container">
 
@@ -14,10 +16,11 @@
             <div class="logo">
                 <img src="./images/Logo.png" alt="Logo">
             </div>
-    
+
             <nav class="top-nav">
                 <ul>
-                    <li class="dashboard" id="dashboard"><a id="dashboard_label" href="./dashboard.html">Dashboard</a></li>
+                    <li class="dashboard" id="dashboard"><a id="dashboard_label" href="./dashboard.html">Dashboard</a>
+                    </li>
                     <li class="consultadoctor" id="consultadoctor"><a id="consultadoctor_label"
                             href="./consultdoctor.html">Consult a Doctor</a></li>
                     <li class="appointments" id="appointments"><a id="appointments_label"
@@ -34,31 +37,30 @@
                 </ul>
             </nav>
         </div>
-    
-    
-    
+
+
+
         <!-- Right Dashboard Information -->
-    <div class="main-content">
+        <div class="main-content">
 
             <div class="top-bar">
                 <div>
-                    <input type="search" id="searchInput" placeholder="Search here..." aria-label="Search"> 
+                    <input type="search" id="searchInput" placeholder="Search here..." aria-label="Search">
                 </div>
-    
+
                 <div class="profile">
                     <img src="./images/profile.jpg" alt="Profile Picture">
                 </div>
                 <div>
                     <img src="./images/notification-icon.png" alt="Notifications" class="notification-icon">
                 </div>
-                
+
             </div>
 
-            <div class="header-container">
 
-                <div class="nav-header-text-container">
-                    <div class="nav-header">
-                        <button class="back-button"> < Back</button>
+            <div class="nav-header">
+                <button class="back-button">
+                    < Back</button>
                         <div class="header-title">
                             <span class="plus-icon">+</span>
                             Consult a Doctor / <B> List Of Medical Practioners </B>
@@ -67,16 +69,14 @@
                             <button class="search-button"> Search</button>
                             <button class="filter-button">≡ Filter</button>
                         </div>
-                    </div>
-    
-                    <div class="text-container">
-                        <h2> List of Medical Practioners </h2>
-                        <p>Check and filter all your medical appointments here</p>
-                    </div>
-                </div>
-
-                
             </div>
+
+            <div class="text-container">
+                <h2> List of Medical Practioners </h2>
+                <p>Check and filter all your medical appointments here</p>
+            </div>
+
+
             <table>
                 <thead>
                     <tr>
@@ -146,7 +146,7 @@
                     <tr onclick="window.location.href='doctorprofile(consultation).html'">
                         <td>
                             <div class="doctor-info">
-                                <img src="" alt="Dr. Jennifer Johnson">
+                                <img src="./images/Avatar.png" alt="Dr. Jennifer Johnson">
                                 <div>
                                     <p>Dr. Ndinelao Iitumba</p>
                                     <p>Primary Care Physician</p>
@@ -161,19 +161,17 @@
                         </td>
                         <td><button class="request-button">Request Consultation</button></td>
                     </tr>
-
-                     
-                    <!-- Repeat for other doctors -->
                 </tbody>
             </table>
-            </div>
-            
+        </div>
 
-            
-            
+
+
+
     </div>
 
-  
+
 
 </body>
+
 </html>
