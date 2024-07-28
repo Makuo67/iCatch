@@ -34,15 +34,13 @@ body, html {
     padding: 10px 20px;
 }
 
-/* Hover effect */
 .top-nav a:hover {
-    background-color: #fff3ef; 
+    background-color: #b9b9b9; 
 }
 
 /* Active link styling */
-.top-nav .active {
-    background-color: #f4581f; /* Change to desired color for active state */
-    color: white; /* Change text color for active state */
+.consultadoctor {
+    background-color: #FFECE5; /* Change to desired color for active state */
 }
 
 .logo img {
@@ -92,6 +90,10 @@ input[type="search"] {
     height: 40px;
     border-radius: 50%;
     margin-right: 10px;
+}
+
+.top-nav{
+    margin-bottom: 120px;
 }
 
 

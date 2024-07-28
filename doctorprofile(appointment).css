@@ -22,6 +22,10 @@ body, html {
 
 }
 
+.top-nav{
+    margin-bottom: 120px;
+}
+
 /* Styling for the navigation links */
 .top-nav ul {
     list-style: none;
@@ -35,15 +39,13 @@ body, html {
     padding: 10px 20px;
 }
 
-/* Hover effect */
 .top-nav a:hover {
-    background-color: #fff3ef; /* Lighter grey on hover */
+    background-color: #b9b9b9; 
 }
 
 /* Active link styling */
-.top-nav .active {
-    background-color: #f4581f; /* Change to desired color for active state */
-    color: white; /* Change text color for active state */
+.appointments {
+    background-color: #FFECE5; /* Change to desired color for active state */
 }
 
 .logo img {

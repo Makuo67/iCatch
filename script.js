@@ -1,27 +1,31 @@
 
-// Wait for the DOM to load
-document.addEventListener('DOMContentLoaded', function() {
-    const links = document.querySelectorAll('.top-nav a'); // Select all anchor tags inside the top-nav
 
-    links.forEach(link => {
-        link.addEventListener('click', function(event) {
-            // Prevent the default link behavior
-            event.preventDefault();
-
-            // Remove 'active' class from all links
-            links.forEach(link => link.classList.remove('active'));
-
-            // Add 'active' class to the clicked link
-            link.classList.add('active');
-
-            // Navigate to the link's href
-            window.location.href = 'index.html';
-            window.location.href = 'consultdoctor.html';
-            window.location.href = 'appointment.html';
-            window.location.href = 'myhospitals.html';
-        });
-    });
+const dashboard = document.getElementById('settings')
+const dashboard_label = document.getElementById('settings_label')
+dashboard.addEventListener('click', () => {
+    dashboard.style.backgroundColor = 'blue'; // Change background color
+    dashboard_label.style.color = 'white'; // Change text color
+    console.log('settings clicked!');
+    // You can add any functionality here
 });
+
+
+// 
+
+
+// const myhospitals = document.getElementById('myhospitals')
+// const myhospitals_label = document.getElementById('myhospitals_label')
+// myhospitals.addEventListener('click', () => {
+//     myhospitals.style.backgroundColor = 'blue'; // Change background color
+//     myhospitals.style.color = 'white'; // Change text color
+//     console.log('settings clicked!');
+//     // You can add any functionality here
+// });
+
+
+
+
+
 
 
 
