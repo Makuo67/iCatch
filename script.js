@@ -1,35 +1,4 @@
 
-
-const dashboard = document.getElementById('settings')
-const dashboard_label = document.getElementById('settings_label')
-dashboard.addEventListener('click', () => {
-    dashboard.style.backgroundColor = 'blue'; // Change background color
-    dashboard_label.style.color = 'white'; // Change text color
-    console.log('settings clicked!');
-    // You can add any functionality here
-});
-
-
-// 
-
-
-// const myhospitals = document.getElementById('myhospitals')
-// const myhospitals_label = document.getElementById('myhospitals_label')
-// myhospitals.addEventListener('click', () => {
-//     myhospitals.style.backgroundColor = 'blue'; // Change background color
-//     myhospitals.style.color = 'white'; // Change text color
-//     console.log('settings clicked!');
-//     // You can add any functionality here
-// });
-
-
-
-
-
-
-
-
-
 document.addEventListener('DOMContentLoaded', function () {
     const currentDate = new Date().toLocaleDateString('en-US', {
         weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
