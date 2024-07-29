@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="doctorprofile(consultation).css">
 </head>
+
 <body>
     <div class="dashboard-container">
 
@@ -14,10 +16,11 @@
             <div class="logo">
                 <img src="./images/Logo.png" alt="Logo">
             </div>
-    
+
             <nav class="top-nav">
                 <ul>
-                    <li class="dashboard" id="dashboard"><a id="dashboard_label" href="./dashboard.html">Dashboard</a></li>
+                    <li class="dashboard" id="dashboard"><a id="dashboard_label" href="./dashboard.html">Dashboard</a>
+                    </li>
                     <li class="consultadoctor" id="consultadoctor"><a id="consultadoctor_label"
                             href="./consultdoctor.html">Consult a Doctor</a></li>
                     <li class="appointments" id="appointments"><a id="appointments_label"
@@ -34,31 +37,34 @@
                 </ul>
             </nav>
         </div>
-    
-    
-    
+
+
+
         <!-- Right Dashboard Information -->
 
         <div class="main-content">
 
             <div class="top-bar">
                 <div>
-                    <input type="search" id="searchInput" placeholder="Search here..." aria-label="Search"> 
+                    <input type="search" id="searchInput" placeholder="Search here..." aria-label="Search">
                 </div>
-    
+
                 <div class="profile">
                     <img src="./images/profile.jpg" alt="Profile Picture">
                 </div>
                 <div>
                     <img src="./images/notification-icon.png" alt="Notifications" class="notification-icon">
-                </div>    
+                </div>
             </div>
 
             <div class="nav-header">
-                <button class="back-button"> < Back</button>
+                <a href="./newconsultation.html">
+                    <button class="back-button">
+                        < Back</button>
+                </a>
                 <div class="header-title">
                     <span class="plus-icon">+</span>
-                    New Consultation  / <B> Doctor's Profile </B>
+                    New Consultation / <B> Doctor's Profile </B>
                 </div>
                 <div class="header-actions">
                     <button class="search-button"> Search</button>
@@ -67,100 +73,124 @@
             </div>
 
 
-        <!-- Start of profile container -->
-    <div class="profile-container">
-        
-        <!-- Start of profile header -->
-        <div class="profile-header">
-            <img src="./images/Avatar.png" alt="Doctor Photo" class="doctor-photo">
-            
-            <!-- Start of profile info -->
-            <div class="profile-info">
-                <h1>David Fayemi</h1>
-                <div class="ratings">
-                    <span>★★★★★</span>
+            <!-- Start of profile container -->
+            <div class="profile-container">
+
+                <!-- Start of profile header -->
+                <div class="profile-header">
+                    <img src="./images/Avatar.png" alt="Doctor Photo" class="doctor-photo">
+
+                    <!-- Start of profile info -->
+                    <div class="profile-info">
+                        <h1> Dr. Ndinelao Iitumba </h1>
+                        <div class="ratings">
+                            <span>★★★★★</span>
+                        </div>
+                        <p>General Practitioner</p>
+                    </div>
+                    <!-- End of profile info -->
+
+                    <a href="./requestconsultation.html">
+                        <button class="request-button"> Request Consultation </button>
+                    </a>
                 </div>
-                <p>General Practitioner</p>
+                <!-- End of profile header -->
+
+
+
+                <!-- Start of profile body -->
+                <div class="profile-body">
+                    <h2>Biography</h2>
+                    <p>
+                        Dr. Ndinelao Iitumba is a dedicated and compassionate General Practitioner with over a decade of
+                        experience in delivering high-quality primary care to a diverse patient population. A graduate
+                        of a prestigious medical school, Ndinelao Iitumba completed her residency in family medicine,
+                        where she
+                        honed her skills in diagnosing and managing a wide range of acute and chronic medical
+                        conditions.
+                        Currently based in [City/Location], Ndinelao Iitumba is committed to the well-being of her
+                        patients,
+                        emphasizing preventive care and the importance of lifestyle modifications in promoting health
+                        and preventing disease. Her approach to patient care is holistic and patient-centered, ensuring
+                        that each patient feels heard and valued during their consultation.
+                        Ndinelao Iitumba is actively involved in community health initiatives and often participates in
+                        health
+                        education programs to increase health awareness in underserved communities. Her professional
+                        affiliations include memberships in several national medical associations, through which she
+                        stays updated with the latest advancements in general practice.
+                        In her practice, Ndinelao Iitumba utilizes a combination of best clinical practices, emerging
+                        medical
+                        research, and innovative technology to provide optimal health outcomes for her patients. She is
+                        particularly interested in areas of preventive medicine, women’s health, and geriatrics.
+                        Outside of her medical practice, Ndinelao Iitumba enjoys mentoring young medical professionals
+                        and
+                        volunteers her time at local schools promoting careers in healthcare. Her dedication to medicine
+                        and her community has earned her respect and admiration from both her peers and her patients.
+                    </p>
+
+                    <!-- Start of profile sections -->
+                    <div class="profile-sections">
+
+                        <!-- Start of hobbies section -->
+                        <div class="profile-section">
+                            <h3>Education</h3>
+                            <ul>
+                                <li> Bachelor of Science in Biomedical Sciences </li>
+                                <li>Graduated: 2010</li>
+                                <li>Graduated Summa Cum Laude</li>
+                            </ul>
+                        </div>
+                        <!-- End of hobbies section -->
+
+                        <!-- Start of speciality section -->
+                        <div class="profile-section">
+                            <h3> Medical specialties</h3>
+                            <ul>
+                                <li>Geriatric Medicine</li>
+                                <li>Obstetrics and Gynecology</li>
+                                <li>Public Health</li>
+                                <li> Preventive Medicine </li>
+                            </ul>
+                        </div>
+
+                        <div class="profile-section">
+                            <h3> Interest and Activities</h3>
+                            <ul>
+                                <li>Gardening</li>
+                                <li>Yoga and Meditation:</li>
+                                <li> Health Blogging</li>
+                                <li> Volunteer Mentoring </li>
+                            </ul>
+                        </div>
+
+
+                        <!-- End of speciality section -->
+
+
+
+                    </div>
+                    <!-- End of profile sections -->
+
+                </div>
+                <!-- End of profile body -->
+
             </div>
-            <!-- End of profile info -->
-            
-            <a href="./requestconsultation.html">
-                <button class="request-button"> Request Consultation </button>
-            </a>
+            <!-- End of profile container -->
+
+
+
+
         </div>
-        <!-- End of profile header -->
-
-
-        
-        <!-- Start of profile body -->
-        <div class="profile-body">
-            <h2>Biography</h2>
-            <p>
-                Dr. Alison Ogaga is a dedicated and compassionate General Practitioner with over a decade of experience in delivering high-quality primary care to a diverse patient population. A graduate of a prestigious medical school, Dr. Ogaga completed her residency in family medicine, where she honed her skills in diagnosing and managing a wide range of acute and chronic medical conditions.
-                Currently based in [City/Location], Dr. Ogaga is committed to the well-being of her patients, emphasizing preventive care and the importance of lifestyle modifications in promoting health and preventing disease. Her approach to patient care is holistic and patient-centered, ensuring that each patient feels heard and valued during their consultation.
-                Dr. Ogaga is actively involved in community health initiatives and often participates in health education programs to increase health awareness in underserved communities. Her professional affiliations include memberships in several national medical associations, through which she stays updated with the latest advancements in general practice.
-                In her practice, Dr. Ogaga utilizes a combination of best clinical practices, emerging medical research, and innovative technology to provide optimal health outcomes for her patients. She is particularly interested in areas of preventive medicine, women’s health, and geriatrics.
-                Outside of her medical practice, Dr. Ogaga enjoys mentoring young medical professionals and volunteers her time at local schools promoting careers in healthcare. Her dedication to medicine and her community has earned her respect and admiration from both her peers and her patients.
-            </p>
-            
-            <!-- Start of profile sections -->
-            <div class="profile-sections">
-                
-                <!-- Start of hobbies section -->
-                <div class="profile-section">
-                    <h3>Hobbies</h3>
-                    <ul>
-                        <li>Orthopedical Specialist</li>
-                        <li>Orthopedical Specialist</li>
-                        <li>Orthopedical Specialist</li>
-                    </ul>
-                </div>
-                <!-- End of hobbies section -->
-                
-                <!-- Start of speciality section -->
-                <div class="profile-section">
-                    <h3>Speciality</h3>
-                    <ul>
-                        <li>Orthopedical Specialist</li>
-                        <li>Orthopedical Specialist</li>
-                        <li>Orthopedical Specialist</li>
-                    </ul>
-                </div>
-                <!-- End of speciality section -->
-                
-                <!-- Start of contact information section -->
-                <div class="profile-section">
-                    <h3>Contact Information</h3>
-                    <ul>
-                        <li>Orthopedical Specialist</li>
-                        <li>Orthopedical Specialist</li>
-                        <li>Orthopedical Specialist</li>
-                    </ul>
-                </div>
-                <!-- End of contact information section -->
-                
-            </div>
-            <!-- End of profile sections -->
-            
-            </div>
-        <!-- End of profile body -->
-        
-        </div>
-    <!-- End of profile container -->
-            
 
 
 
-   </div>
 
-      
-            
 
-            
-            
+
     </div>
 
-  
+
 
 </body>
+
 </html>

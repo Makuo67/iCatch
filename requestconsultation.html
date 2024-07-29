@@ -67,10 +67,7 @@
                     <label for="date">Date:</label>
                     <input type="date" id="date" name="date" required>
 
-                    <label for="time">Time:</label>
-                    <input type="time" id="time" name="time" required>
-
-                    <label for="reason">Reason for Appointment:</label>
+                    <label for="reason">Reason for Consultation:</label>
                     <input type="text" id="reason" name="reason" class="special-input" required>
 
                     <button type="submit">Request Consultation</button>
@@ -78,9 +75,14 @@
 
                 <div id="confirmation" class="hidden">
                     <h2>Consultation Request Successfully</h2>
-                    <p>Thank you for scheduling an appointment.</p>
+                    <p>
+                        "Thank you for requesting a consultation! Please head back to our homepage and keep an eye on your email or messages for confirmation details. 
+                        We look forward to connecting with you soon!"
+                    </p>
 
-                    <button id="back-home">Go Home</button>
+                    <a href="./dashboard.html">
+                        <button id="back-home">Go Home</button>
+                      </a>
                 </div>
             </div>
 

@@ -18,8 +18,6 @@ body, html {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    /* position: fixed; */
-
 }
 
 .top-nav{
@@ -34,8 +32,8 @@ body, html {
 
 .top-nav a {
     display: block;
-    color: black; /* Text color */
-    text-decoration: none; /* No underline */
+    color: black; 
+    text-decoration: none; 
     padding: 10px 20px;
 }
 
@@ -46,7 +44,7 @@ body, html {
 
 /* Active link styling */
 .appointments {
-    background-color: #FFECE5; /* Change to desired color for active state */
+    background-color: #FFECE5; 
 }
 
 
@@ -121,11 +119,11 @@ input[type="search"] {
 
 .header-title {
     font-size: 16px;
-    color: #ff4500; /* Orange color for the header title */
+    color: #ff4500; 
 }
 
 .plus-icon {
-    color: #ff4500; /* Matching the title color */
+    color: #ff4500; 
     margin-right: 5px;
 }
 
@@ -139,12 +137,12 @@ input[type="search"] {
 }
 
 .search-button:before {
-    content: '\f002'; /* Unicode for Font Awesome's search icon */
+    content: '\f002'; 
     margin-right: 5px;
 }
 
 .filter-button:before {
-    content: '\f0b0'; /* Unicode for Font Awesome's filter icon */
+    content: '\f0b0'; 
     margin-right: 5px;
 }
 

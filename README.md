@@ -29,8 +29,6 @@ The Eazzi Doc Telemedicine Dashboard is crafted to improve healthcare access, fo
 ```bash
 git clone https://github.com/yourusername/eazzi-doc-telemedicine-dashboard.git
 cd eazzi-doc-telemedicine-dashboard
-npm install
-npm start
 ```
 
 ## Usage
