@@ -49,4 +49,3 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 
 ---
 
-Make sure to update the repository link, contact information, and any specific technologies used in your project as needed. This README will provide a clear overview for anyone who wants to understand or contribute to the Eazzi Doc Telemedicine Dashboard.
