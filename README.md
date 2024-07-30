@@ -33,8 +33,9 @@ cd eazzi-doc-telemedicine-dashboard
 
 ## Usage
 ```bash
+# Sign up with credential as a first user.
 # Login with credentials to access the dashboard.
-# Navigate through the dashboard to book appointments, book consultation view health stats, or locate hospitals.
+# Navigate through the dashboard to book appointments, book consultation, view health stats, or locate hospitals.
 ```
 
 ## Contributing
@@ -45,7 +46,7 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 
 ## Contact
 - **Email**: a.oshingbes@alustudent.com
-- **Phone**: 081
+- **Phone**: + 250792402821
 
 ---
 
