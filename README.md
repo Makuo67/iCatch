@@ -55,6 +55,10 @@ go live
 
 [![Watch the video](https://img.youtube.com/vi/YMNOptAKmvs/maxresdefault.jpg)](https://youtu.be/YMNOptAKmvs)
 
+## Kaggle Notebook
+[Kaggle](https://www.kaggle.com/code/okekemakuochukwu/capstone1)
+
+
 ## Contributing
 
 Contributions are welcome! For major changes, please open an issue first to discuss what you would like to change. Please ensure to update tests as appropriate.
