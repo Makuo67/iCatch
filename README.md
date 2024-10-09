@@ -1,6 +1,6 @@
 # Eazzi Doc Telemedicine Dashboard
 
-![Dashboard](./images/EazziDocdashboard.png)
+![Dashboard](EazziDocdashboard.png)
 
 ## Introduction
 
