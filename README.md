@@ -59,7 +59,7 @@ go live
 [Kaggle](https://www.kaggle.com/code/okekemakuochukwu/capstone1)
 
 ## Github Repo
-[Github](https://www.github.com/Makuo67/iCatch.git)
+https://www.github.com/Makuo67/iCatch.git
 
 ## Contributing
 
