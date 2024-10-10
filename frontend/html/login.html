@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="/frontend/css/login.css">
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
 </head>
@@ -16,7 +16,7 @@
 
     <div class="login-container">
         <div class="logo">
-            <img src="./images/Logo.png" alt="Logo">
+            <img src="/images/Logo.png" alt="Logo">
         </div>
 
         <form id="login-form">
@@ -27,7 +27,7 @@
                 <input type="password" id="password" name="password" required placeholder="Password">
             </div>
             <button type="submit" class="login-button">Log in</button>
-            <p class="alternative">Don't have an account? <a href="./index.html">Sign Up</a></p>
+            <p class="alternative">Don't have an account? <a href="/frontend/html/index.html">Sign Up</a></p>
             <div class="divider">or</div>
             <button type="button" class="google-login">Continue with Gmail</button>
         </form>
@@ -59,7 +59,7 @@
                 } else {
                     console.log('Sign up successful:', data);
                     alert('Login In successful!');
-                    window.location.href = '/dashboard.html';
+                    window.location.href = '/frontend/html/dashboard.html';
                 }
             } catch (error) {
                 console.error('Unexpected error:', error);

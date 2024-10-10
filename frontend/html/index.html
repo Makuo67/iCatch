@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up Page</title>
-    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="/frontend/css/signup.css">
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
 </head>
@@ -13,7 +13,7 @@
 <body>
     <div class="signup-container">
         <div class="logo">
-            <img src="./images/Logo.png" alt="Logo">
+            <img src="/images/Logo.png" alt="Logo">
         </div>
         <form id="signup-form">
             <div class="input-group">
@@ -34,7 +34,7 @@
                 <label for="show_password">Show password</label>
             </div>
             <button type="submit" class="signup-button">Sign Up</button>
-            <p class="alternative">Already have an account? <a href="./login.html">Login</a></p>
+            <p class="alternative">Already have an account? <a href="/frontend/html/login.html">Login</a></p>
             <div class="divider">or</div>
             <button type="button" class="google-signup">Sign Up with Gmail</button>
         </form>
@@ -128,7 +128,7 @@
                 } else {
                     console.log('Sign up successful:', data);
                     alert('Sign up successful! Then go ahead to Login.');
-                    window.location.href = '/login.html'; // Redirect to index.html upon successful sign-up
+                    window.location.href = '/frontend/html/login.html'; // Redirect to index.html upon successful sign-up
                 }
             } catch (error) {
                 console.error('Unexpected error:', error);
