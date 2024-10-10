@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Consultation</title>
+    <link rel="stylesheet" href="newconsulation.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+
+        <!-- Left Sidebar Navigation -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="./images/Logo.png" alt="Logo">
+            </div>
+
+            <nav class="top-nav">
+                <ul>
+                    <li class="dashboard" id="dashboard"><a id="dashboard_label" href="./dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="consultadoctor" id="consultadoctor"><a id="consultadoctor_label"
+                            href="./consultdoctor.html">Consult a Doctor</a></li>
+                    <li class="appointments" id="appointments"><a id="appointments_label"
+                            href="./appointment.html">Appointments</a></li>
+                    <li class="myhospital" id="myhospitals"><a id="myhospitals_label" href="./myhospitals.html">My
+                            Hospitals</a></li>
+                </ul>
+            </nav>
+            <nav class="bottom-nav">
+                <ul>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Refer Family & Friends</a></li>
+                </ul>
+            </nav>
+        </div>
+
+
+
+        <!-- Right Dashboard Information -->
+        <div class="main-content">
+
+            <div class="top-bar">
+                <div>
+                    <input type="search" id="searchInput" placeholder="Search here..." aria-label="Search">
+                </div>
+
+                <div class="profile">
+                    <img src="./images/profile.jpg" alt="Profile Picture">
+                </div>
+                <div>
+                    <img src="./images/notification-icon.png" alt="Notifications" class="notification-icon">
+                </div>
+
+            </div>
+
+
+            <div class="nav-header">
+                <button class="back-button">
+                    < Back</button>
+                        <div class="header-title">
+                            <span class="plus-icon">+</span>
+                            Consult a Doctor / <B> List Of Medical Practioners </B>
+                        </div>
+                        <div class="header-actions">
+                            <button class="search-button"> Search</button>
+                            <button class="filter-button">≡ Filter</button>
+                        </div>
+            </div>
+
+            <div class="text-container">
+                <h2> List of Medical Practioners </h2>
+                <p>Explore our directory of skilled medical practitioners, each dedicated to providing top-notch care and specialized treatment. These professionals combine expertise with empathy to meet your health needs and ensure the best possible outcomes.</p>
+            </div>
+
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Ratings</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr onclick="window.location.href='doctorprofile(consultation).html'">
+                        <td>
+                            <div class="doctor-info">
+                                <img src="./images/Avatar.png" alt="Dr. Ndinelao Iitumba">
+                                <div>
+                                    <p>Dr. Ndinelao Iitumba</p>
+                                    <p>General Practitioner</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Cottage Medicare Hospital, 18 Iwaya Rd, Lagos</td>
+                        <td>
+                            <div class="ratings">
+                                <span>★★★★★</span>
+                            </div>
+                        </td>
+                        <td><button class="request-button">Request Consultation</button></td>
+                    </tr>
+                    <tr onclick="window.location.href='doctorprofile(consultation).html'">
+                        <td>
+                            <div class="doctor-info">
+                                <img src="./images/Avatar.png" alt="Dr. Ndinelao Iitumba">
+                                <div>
+                                    <p>Dr. Ndinelao Iitumba</p>
+                                    <p>Primary Care Physician</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Blue Cross Hospital, 48, Ijaiye Road, Ogba, Lagos</td>
+                        <td>
+                            <div class="ratings">
+                                <span>★★★★★</span>
+                            </div>
+                        </td>
+                        <td><button class="request-button">Request Consultation</button></td>
+                    </tr>
+
+                    <tr onclick="window.location.href='doctorprofile(consultation).html'">
+                        <td>
+                            <div class="doctor-info">
+                                <img src="./images/Avatar.png" alt="Dr. Jennifer Johnson">
+                                <div>
+                                    <p>Dr. Ndinelao Iitumba</p>
+                                    <p>Primary Care Physician</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Blue Cross Hospital, 48, Ijaiye Road, Ogba, Lagos</td>
+                        <td>
+                            <div class="ratings">
+                                <span>★★★★★</span>
+                            </div>
+                        </td>
+                        <td><button class="request-button">Request Consultation</button></td>
+                    </tr>
+
+                    <tr onclick="window.location.href='doctorprofile(consultation).html'">
+                        <td>
+                            <div class="doctor-info">
+                                <img src="./images/Avatar.png" alt="Dr. Jennifer Johnson">
+                                <div>
+                                    <p>Dr. Ndinelao Iitumba</p>
+                                    <p>Primary Care Physician</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Blue Cross Hospital, 48, Ijaiye Road, Ogba, Lagos</td>
+                        <td>
+                            <div class="ratings">
+                                <span>★★★★★</span>
+                            </div>
+                        </td>
+                        <td><button class="request-button">Request Consultation</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+
+
+    </div>
+
+
+
+</body>
+
+</html>

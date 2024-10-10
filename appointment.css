@@ -2,12 +2,13 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-   
+    overflow: hidden;
 }
 
 .dashboard-container {
     display: flex;
     min-height: 100vh;
+    overflow: hidden;
 }
 
 .sidebar {
@@ -17,13 +18,38 @@ body, html {
     padding: 20px;
     display: flex;
     flex-direction: column;
+}
 
+.top-nav{
+    margin-bottom: 120px;
+}
+
+/* Styling for the navigation links */
+.top-nav ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.top-nav a {
+    display: block;
+    color: black;
+    text-decoration: none; 
+    padding: 10px 20px;
+}
+
+/* Hover effect */
+.top-nav a:hover {
+    background-color: #b9b9b9; 
+}
+
+/* Active link styling */
+.appointments {
+    background-color: #FFECE5; 
 }
 
 .logo img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+    width: 120px;
+    height: 50px;
     margin-bottom: 10px;
 }
 
@@ -43,6 +69,9 @@ body, html {
     flex-grow: 1;
     padding: 20px;
     background: #F9FAFB;
+    width: 100%;
+    overflow-y: scroll;
+    height: 100vh;
 }
 
 .top-bar {
@@ -132,12 +161,12 @@ input[type="search"] {
 }
 
 .tab.active {
-    background-color: #F7CAC9; /* Peach color for active tab */
+    background-color: #F7CAC9; 
     color: #333;
 }
 
 .tab:not(.active) {
-    background-color: #f0f0f0; /* Light gray for inactive tabs */
+    background-color: #f0f0f0; 
     color: #666;
 }
 
@@ -201,7 +230,7 @@ input[type="search"] {
 
 .dates {
     display: grid;
-    grid-template-columns: repeat(7, 1fr); /* Creates a grid layout with 7 columns */
+    grid-template-columns: repeat(7, 1fr); 
     gap: 5px;
     padding: 10px;
 }
@@ -279,7 +308,7 @@ input[type="search"] {
 }
 
 .cell.name, .cell.address {
-    flex: 1; /* Gives more space to name and address */
+    flex: 1; 
     display: flex;
     flex-direction: row;
     align-content: center;

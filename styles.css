@@ -2,16 +2,13 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    overflow: hidden;
 }
 
 .dashboard-container {
     display: flex;
     min-height: 100vh;
-}
-
-.dashboard-container {
-    display: flex;
-    min-height: 100vh;
+    overflow: hidden;
 }
 
 .sidebar {
@@ -21,14 +18,16 @@ body, html {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    /* position: fixed; */
 
 }
 
+.top-nav{
+    margin-bottom: 120px;
+}
+
 .logo img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+    width: 120px;
+    height: 50px;
     margin-bottom: 10px;
 }
 
@@ -44,10 +43,36 @@ body, html {
     display: block;
 }
 
+/* Styling for the navigation links */
+.top-nav ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.top-nav a {
+    display: block;
+    color: black; /* Text color */
+    text-decoration: none; /* No underline */
+    padding: 10px 20px;
+}
+
+/* Hover effect */
+.top-nav a:hover {
+    background-color: #b9b9b9; 
+}
+
+/* Active link styling */
+.dashboard {
+    background-color: #FFECE5; /* Change to desired color for active state */
+}
+
 .main-content {
     flex-grow: 1;
     padding: 20px;
     background: #F9FAFB;
+    width: 85%;
+    overflow-y: scroll;
+    height: 100vh;
 }
 
 .top-bar {

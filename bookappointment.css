@@ -1,0 +1,149 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 15%;
+    background: #ffff;
+    color: #101928;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-nav{
+    margin-bottom: 120px;
+}
+
+/* Styling for the navigation links */
+.top-nav ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.top-nav a {
+    display: block;
+    color: black; /* Text color */
+    text-decoration: none; /* No underline */
+    padding: 10px 20px;
+}
+
+/* Hover effect */
+.top-nav a:hover {
+    background-color: #b9b9b9; 
+}
+
+/* Active link styling */
+.appointments {
+    background-color: #FFECE5; /* Change to desired color for active state */
+}
+
+.logo img {
+    width: 120px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li a {
+    color:#454545;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background: #F9FAFB;
+    width: 100%;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+input[type="search"] {
+    padding: 8px;
+    margin-right: 350px;
+    width: 600px;
+    border: 0.5px solid #ccc;
+    border-radius: 4px;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    width: 100vh;
+    margin-left: 120px;
+    margin-top: 30px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.special-input {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    height: 60px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #EB5017;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+button:hover {
+    background-color: #E04E2A;
+}
+
+.hidden {
+    display: none;
+}

@@ -2,12 +2,15 @@ body {
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
+    background-image: url('./images/Background\ Image.png'); /* Replace with your image path */
+    background-size: cover; /* Cover the entire page */
+    background-position: center; /* Center the background image */
     align-items: center;
     height: 100vh;
     background-color: #f4f4f4;
 }
 
-.login-container {
+.signup-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,7 +40,7 @@ input[type="checkbox"] {
     margin-right: 10px; /* Space between checkbox and label */
 }
 
-.login-button, .google-login {
+.signup-button, .google-signup {
     width: 100%;
     padding: 12px 120px 12px 120px;
     border: none;
@@ -48,7 +51,7 @@ input[type="checkbox"] {
     margin-top: 24px;
 }
 
-.login-button:hover, .google-login:hover {
+.signup-button:hover, .google-login:hover {
     background-color: #C03F14; /* Slightly darker orange on hover for feedback */
 }
 
@@ -77,4 +80,10 @@ a {
 
 a:hover {
     text-decoration: underline; /* Adds underline on hover for link recognition */
+}
+
+.logo img {
+    width: 240px;
+    height: 100px;
+    margin-bottom: 30px;
 }
