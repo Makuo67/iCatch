@@ -2,4 +2,4 @@ lib/
 lib64/
 bin/
 iCatch/
-backend/app/models/densenet.h5*.h5
+*.h5
