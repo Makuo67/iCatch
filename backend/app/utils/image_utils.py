@@ -1,9 +1,11 @@
 import numpy as np
 import cv2
 from PIL import Image
+import os
 
 
 def save_image(uploaded_file):
+    os.makedirs("static", exist_ok=True)
     file_location = f"static/{uploaded_file.filename}"
     with open(file_location, "wb+") as file_object:
         file_object.write(uploaded_file.file.read())

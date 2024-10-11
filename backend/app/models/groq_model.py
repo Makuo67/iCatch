@@ -1,10 +1,26 @@
 import requests
+from groq import Client
 
 GROQ_API_KEY = "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"
 
 
+# Initialize the Groq client with your API key
+client = Client(api_key=GROQ_API_KEY)
+
+
 def get_text_explanation(predicted_class):
-    # Construct a virtual doctor prompt
+    """
+    Sends a request to the Groq API with a generated prompt for the given predicted class
+    and retrieves a detailed medical explanation.
+
+    Args:
+        predicted_class (str): The diagnosed medical condition to be explained.
+
+    Returns:
+        str: A detailed explanation of the diagnosis, treatment plan, and lifestyle advice.
+    """
+
+    # Construct the prompt for the virtual doctor
     prompt = f"""
     You are a virtual doctor. The patient has been diagnosed with {predicted_class}.
     
@@ -14,23 +30,16 @@ def get_text_explanation(predicted_class):
     4. Finally, remind the patient to consult their personal doctor for confirmation and further management.
     """
 
-    # Prepare API request to Groq
-    payload = {
-        "model": "llama-3.1-8b-instant",  # Example of a selected model
-        "messages": [{"role": "user", "content": prompt}],
-    }
-    headers = {
-        "Authorization": f"Bearer {GROQ_API_KEY}",
-        "Content-Type": "application/json"
-    }
-
     try:
-        # Send request to Groq API
-        response = requests.post(
-            "https://api.groq.ai/explain", json=payload, headers=headers)
-        response.raise_for_status()  # Raise exception for HTTP errors
-        explanation = response.json().get("choices", [{}])[0].get(
-            "message", {}).get("content", "No explanation available.")
+        # Send a chat completion request using Groq's client
+        chat_completion = client.chat.completions.create(
+            messages=[{"role": "user", "content": prompt}],
+            model="llama-3.1-8b-instant",  # Example model, ensure the correct one is used
+        )
+
+        # Extract the response text from the chat completion
+        explanation = chat_completion.choices[0].message.content
+
     except requests.RequestException as e:
         print(f"Error contacting Groq API: {e}")
         explanation = "There was an error fetching the explanation. Please try again later."

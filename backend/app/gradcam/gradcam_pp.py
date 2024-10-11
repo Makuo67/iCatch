@@ -23,4 +23,5 @@ def generate_gradcam(model, image, class_idx):
     plt.imshow(heatmap[0], cmap='jet', alpha=0.5)
     heatmap_path = 'static/gradcam_image.png'
     plt.savefig(heatmap_path)
+    plt.close()
     return heatmap_path

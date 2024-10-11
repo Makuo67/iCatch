@@ -1,10 +1,12 @@
+import os
 import tensorflow as tf
 # We need to track this
 
 
 def load_densenet_model():
     # Load the pre-trained DenseNet201 model (h5 file)
-    model = tf.keras.models.load_model("models/densenet.h5")
+    model = tf.keras.models.load_model(
+        "models/densenet_model.h5")
     return model
 
 

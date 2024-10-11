@@ -1,4 +1,5 @@
 from fastapi import FastAPI, UploadFile, File
+from fastapi.middleware.cors import CORSMiddleware
 from models.densenet_model import load_densenet_model, predict_disease
 from models.groq_model import get_text_explanation
 from gradcam.gradcam_pp import generate_gradcam
@@ -7,11 +8,24 @@ from utils.response_utils import real_time_text_generator
 
 app = FastAPI()
 
+# Add CORS middleware
+origins = [
+    "http://localhost:5000",
+    # other allowed origins here
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all HTTP methods
+    allow_headers=["*"],  # Allows all headers
+)
 # Load the DenseNet201 model
 densenet_model = load_densenet_model()
 # Define the class names for disease classification
-class_names = ['Normal Fundus', 'Diabetic Retinopathy',
-               'Cataract', 'Glaucoma', 'Age-related Macular Degeneration']
+class_names = ['Age-related Macular Degeneration', 'Cataract',
+               'Diabetic retinopathy', 'Glaucoma', 'Normal Fundus']
 
 
 @app.post("/predict/")
@@ -30,7 +44,7 @@ async def predict_image(file: UploadFile = File(...)):
 
     # Generate GradCAM++ heatmap
     gradcam_image_path = generate_gradcam(
-        densenet_model, image, disease_prediction)
+        densenet_model, image, class_index)
 
     # Generate AI text explanation
     explanation = get_text_explanation(disease_prediction)
