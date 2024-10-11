@@ -1,5 +1,6 @@
 from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles  # Import StaticFiles
 from models.densenet_model import load_densenet_model, predict_disease
 from models.groq_model import get_text_explanation
 from gradcam.gradcam_pp import generate_gradcam
@@ -21,6 +22,10 @@ app.add_middleware(
     allow_methods=["*"],  # Allows all HTTP methods
     allow_headers=["*"],  # Allows all headers
 )
+# Serve static files (images) from the "static" directory
+app.mount("/static",
+          StaticFiles(directory="./static"), name="static")
+
 # Load the DenseNet201 model
 densenet_model = load_densenet_model()
 # Define the class names for disease classification
@@ -52,4 +57,4 @@ async def predict_image(file: UploadFile = File(...)):
     # Stream text like ChatGPT
     text_stream = real_time_text_generator(explanation)
 
-    return {"prediction": disease_prediction, "gradcam_image": gradcam_image_path, "explanation": text_stream}
+    return {"prediction": disease_prediction, "original_image": f"http://localhost:8000/static/{image_path}", "gradcam_image": f"http://localhost:8000/{gradcam_image_path}", "explanation": explanation}
