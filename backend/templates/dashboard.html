@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dashboard</title>
-<link rel="stylesheet" href="/frontend/css/styles.css">
+<link rel="stylesheet" href="{{ url_for('static', path='css/styles.css') }}">
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
 
@@ -16,22 +16,50 @@
 <!-- Left Sidebar Navigation -->
 <div class="sidebar">
     <div class="logo">
-        <img src="/images/Logo.png" alt="Logo">
+        <img src="{{ url_for('static', path='app/static/Avatar.png') }}" alt="Logo">
     </div>
 
     <nav class="top-nav">
         <ul>
-            <li class="dashboard" id="dashboard"><a id="dashboard_label" href="/frontend/html/index.html">Dashboard</a></li>
-            <li class= "consultadoctor" id="consultadoctor"><a id="consultadoctor_label" href="/frontend/html/consultdoctor.html">Consult a Doctor</a></li>
-            <li class="appointments" id="appointments"><a id="appointments_label" href="/frontend/html/appointment.html">Appointments</a></li>
-            <li class="myhospital" id="myhospitals"><a id="myhospitals_label" href="/frontend/html/myhospitals.html">My Hospitals</a></li>
-            <li class="myhospital" id="myhospitals"><a id="myhospitals_label" href="/frontend/html/diagnosis.html">AI Diagnosis</a></li>
+          <li class="dashboard" id="dashboard">
+            <a id="dashboard_label" href="{{ url_for('render_dashboard') }}"
+              >Dashboard</a
+            >
+          </li>
+          <li class="consultadoctor" id="consultadoctor">
+            <a
+              id="consultadoctor_label"
+              href="{{ url_for('render_consultdoctor') }}"
+              >Consult a Doctor</a
+            >
+          </li>
+          <li class="appointments" id="appointments">
+            <a
+              id="appointments_label"
+              href="{{ url_for('render_appointment') }}"
+              >Appointments</a
+            >
+          </li>
+          <li class="myhospital" id="myhospitals">
+            <a
+              id="myhospitals_label"
+              href="{{ url_for('render_myhospitals') }}"
+              >My Hospitals</a
+            >
+          </li>
+          <li class="myhospital" id="myhospitals">
+            <a
+              id="myhospitals_label"
+              href="{{ url_for('render_upload_form') }}"
+              >AI Diagnosis</a
+            >
+          </li>
         </ul>
-    </nav>
+      </nav>
 
     <nav class="bottom-nav">
         <ul>
-            <li id="settings"><a id="settings_label" href="/frontend/html/consultdoctor.html">Settings</a></li>
+            <li><a>Settings</a></li>
             <li><a href="#">Help Center</a></li>
             <li><a href="#">Refer Family & Friends</a></li>
         </ul>
@@ -48,10 +76,10 @@
             </div>
 
             <div class="profile">
-                <img src="/images/profile.jpg" alt="Profile Picture">
+                <img src="{{ url_for('static', path='images/profile.jpg') }}" alt="Profile Picture">
             </div>
             <div>
-                <img src="/images/notification-icon.png" alt="Notifications" class="notification-icon">
+                <img src="{{ url_for('static', path='images/notification-icon.png') }}" alt="Notifications" class="notification-icon">
             </div>
             
         </div>
@@ -79,28 +107,28 @@
             <div class="metric-card">
                 <h4>Blood pressure</h4>
                 <p class="value">118/75 mm/hg</p>
-                <div class="icon-container"><img src="/images/Blood.png" alt="Blood Pressure"></div>
+                <div class="icon-container"><img src="{{ url_for('static', path='images/Blood.png') }}" alt="Blood Pressure"></div>
                 <div class="status healthy"><span class="percentage">5%</span> Healthy</div>
             </div>
     
             <div class="metric-card">
                 <h4>Cholesterol levels</h4>
                 <p class="value">164 mg/dl</p>
-                <div class="icon-container"><img src="/images/Cholesterol.png" alt="Cholesterol"></div>
+                <div class="icon-container"><img src="{{ url_for('static', path='images/Cholesterol.png') }}" alt="Cholesterol"></div>
                 <div class="status healthy"><span class="percentage">5%</span> Healthy</div>
             </div>
     
             <div class="metric-card">
                 <h4>Glucose levels</h4>
                 <p class="value">5.5 mmol/L</p>
-                <div class="icon-container"><img src="/images/Glucose.png" alt="Glucose"></div>
+                <div class="icon-container"><img src="{{ url_for('static', path='images/Glucose.png') }}" alt="Glucose"></div>
                 <div class="status healthy"><span class="percentage">5%</span> Healthy</div>
             </div>
     </div>
        
         <div class="profile-card">
             <div class="profile-header">
-                <img src="/images/profile.jpg" alt="Ademola Emmanuel" class="profile-image">
+                <img src="{{ url_for('static', path='images/profile.jpg') }}" alt="Ademola Emmanuel" class="profile-image">
                 <div class="profile-info">
                     <h1> </h1>
                     <p>HMO ID: RET/15118/A</p>
@@ -128,7 +156,7 @@
                     <p><span class="icon location-icon"></span>Cottage Medicare Hospital, 18 Iwaya Rd, Yaba 101245, Lagos</p>
                 </div>
                 <div class="doctor-details">
-                    <img src="/images/Avatar.png" alt="Dr. Alison Ogaga" class="doctor-image">
+                    <img src="{{ url_for('static', path='images//Avatar.png') }}" alt="Dr. Alison Ogaga" class="doctor-image">
                     <div>
                         <p class="doctor-name">Dr. Ndinelao Iitumba</p>
                         <p class="specialization">General Practitioner</p>
@@ -147,7 +175,7 @@
     <h2>Quick Actions</h2>
     <ul>
         <li>
-            <span class="icon"><img src="/images/Appiontment Icon.png" alt="Book"></span>
+            <span class="icon"><img src="{{ url_for('static', path='images/Appointment Icon.png') }}" alt="Book"></span>
             <div class="text">
                 <p>Book an Appointment</p>
                 <small>Find a doctor and specialization</small>
@@ -155,7 +183,7 @@
             <span class="arrow">&gt;</span>
         </li>
         <li>
-            <span class="icon"><img src="/images/Request Icon.png" alt="Consult"></span>
+            <span class="icon"><img src="{{ url_for('static', path='images/Request Icon.png') }}" alt="Consult"></span>
             <div class="text">
                 <p>Request Consultation</p>
                 <small>Talk to a specialist</small>
@@ -163,7 +191,7 @@
             <span class="arrow">&gt;</span>
         </li>
         <li>
-            <span class="icon"><img src="/images/Location Icon.png" alt="Locate"></span>
+            <span class="icon"><img src="{{ url_for('static', path='images/Location Icon.png') }}" alt="Locate"></span>
             <div class="text">
                 <p>Locate a hospital near you</p>
                 <small>Find closest hospitals</small>
@@ -171,7 +199,7 @@
             <span class="arrow">&gt;</span>
         </li>
         <li>
-            <span class="icon"><img src="/images/Emergency Logo.png" alt="Emergency"></span>
+            <span class="icon"><img src="{{ url_for('static', path='images/Logo.png') }}" alt="Emergency"></span>
             <div class="text">
                 <p>Emergency</p>
                 <small>Request immediate help</small>
@@ -188,7 +216,7 @@
         <ul class="">
             <li>
                 <div class="profile">
-                    <img src="/images/Avatar.png" alt="Dr. Ndinelao Litumba">
+                    <img src="{{ url_for('static', path='images/Avatar.png') }}" alt="Dr. Ndinelao Litumba">
                     <div>
                         <h3>Dr. Alison Ogaga</h3>
                         <p>General Practitioner</p>
@@ -199,7 +227,7 @@
             <!-- Repeat for other doctors -->
             <li>
                 <div class="profile">
-                    <img src="/images/Avatar.png" alt="Dr. Ndinelao Litumba">
+                    <img src="{{ url_for('static', path='images/Avatar.png') }}" alt="Dr. Ndinelao Litumba">
                     <div>
                         <h3>Dr. Jennifer Johnson</h3>
                         <p>Primary Care Physician</p>
@@ -210,7 +238,7 @@
             <!-- Additional list items for Dr. Anish Patel, Dr. Samuel Smith, Dr. Lily Chen -->
             <li>
                 <div class="profile">
-                    <img src="/images/Avatar.png" alt="Dr. Ndinelao Litumba">
+                    <img src="{{ url_for('static', path='images/Avatar.png') }}" alt="Dr. Ndinelao Litumba">
                     <div>
                         <h3>Dr. Jennifer Johnson</h3>
                         <p>Primary Care Physician</p>
@@ -221,7 +249,7 @@
             <!-- Additional list items for Dr. Anish Patel, Dr. Samuel Smith, Dr. Lily Chen -->
             <li>
                 <div class="profile">
-                    <img src="/images/Avatar.png" alt="Dr. Ndinelao Litumba">
+                    <img src="{{ url_for('static', path='images/Avatar.png') }}" alt="Dr. Ndinelao Litumba">
                     <div>
                         <h3>Dr. Jennifer Johnson</h3>
                         <p>Primary Care Physician</p>
@@ -232,7 +260,7 @@
             <!-- Additional list items for Dr. Anish Patel, Dr. Samuel Smith, Dr. Lily Chen -->
             <li>
                 <div class="profile">
-                    <img src="/images/Avatar.png" alt="Dr. Ndinelao Litumba">
+                    <img src="{{ url_for('static', path='images/Avatar.png') }}" alt="Dr. Ndinelao Litumba">
                     <div>
                         <h3>Dr. Jennifer Johnson</h3>
                         <p>Primary Care Physician</p>
@@ -248,6 +276,6 @@
 
 </div>
 </div>
-<script src="/script.js"></script>
+<script src="{{ url_for('static', path='script/scripts.js') }}"></script>
 </body>
 </html>

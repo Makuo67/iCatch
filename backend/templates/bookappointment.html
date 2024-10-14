@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', path='css/bookappointment.css') }}"
+    />
+  </head>
+
+  <body>
+    <div class="dashboard-container">
+      <!-- Left Sidebar Navigation -->
+      <div class="sidebar">
+        <div class="logo">
+          <img
+            src="{{ url_for('static', path='images/Logo.png') }}"
+            alt="Logo"
+          />
+        </div>
+
+        <nav class="top-nav">
+          <ul>
+            <li class="dashboard" id="dashboard">
+              <a id="dashboard_label" href="{{ url_for('render_dashboard') }}"
+                >Dashboard</a
+              >
+            </li>
+            <li class="consultadoctor" id="consultadoctor">
+              <a
+                id="consultadoctor_label"
+                href="{{ url_for('render_consultdoctor') }}"
+                >Consult a Doctor</a
+              >
+            </li>
+            <li class="appointments" id="appointments">
+              <a
+                id="appointments_label"
+                href="{{ url_for('render_appointment') }}"
+                >Appointments</a
+              >
+            </li>
+            <li class="myhospital" id="myhospitals">
+              <a
+                id="myhospitals_label"
+                href="{{ url_for('render_myhospitals') }}"
+                >My Hospitals</a
+              >
+            </li>
+            <li class="myhospital" id="myhospitals">
+              <a
+                id="myhospitals_label"
+                href="{{ url_for('render_upload_form') }}"
+                >AI Diagnosis</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <nav class="bottom-nav">
+          <ul>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Refer Family & Friends</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Right Dashboard Information -->
+      <div class="main-content">
+        <div class="top-bar">
+          <div>
+            <input
+              type="search"
+              id="searchInput"
+              placeholder="Search here..."
+              aria-label="Search"
+            />
+          </div>
+
+          <div class="profile">
+            <img
+              src="{{ url_for('static', path='images/profile.jpg') }}"
+              alt="Profile Picture"
+            />
+          </div>
+          <div>
+            <img
+              src="{{ url_for('static', path='images/notification-icon.png') }}"
+              alt="Notifications"
+              class="notification-icon"
+            />
+          </div>
+        </div>
+
+        <div class="container">
+          <h1>Schedule an Appointment</h1>
+          <form id="appointment-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required />
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required />
+
+            <label for="reason">Reason for Appointment:</label>
+            <input
+              type="text"
+              id="reason"
+              name="reason"
+              class="special-input"
+              required
+            />
+
+            <button type="submit">Schedule Appointment</button>
+          </form>
+
+          <div id="confirmation" class="hidden">
+            <h2>Appointment Scheduled</h2>
+            <p>Thank you for scheduling an appointment.</p>
+            <button id="another-appointment">Schedule Another</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="{{ url_for('static', path='script/scripts.js') }}"></script>
+  </body>
+</html>

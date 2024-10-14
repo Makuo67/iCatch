@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diagnosis Result</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', path='css/results.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Diagnosis Result</h1>
+    <h2>Diagnosis: {{ prediction }}</h2>
+    Jinaj
+    <div>
+      <h3>Original Image</h3>
+      <img src="{{ original_image }}" alt="Original Image" />
+    </div>
+    <div>
+      <h3>GradCAM++ Image</h3>
+      <img src="{{ gradcam_image }}" alt="GradCAM++ Image" />
+    </div>
+    <h3>AI Explanation:</h3>
+    <p>{{ explanation }}</p>
+    <a href="/">Upload another image</a>
+  </body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', path='css/doctorprofile(appointment).css') }}"
+    />
+  </head>
+
+  <body>
+    <div class="dashboard-container">
+      <!-- Left Sidebar Navigation -->
+      <div class="sidebar">
+        <div class="logo">
+          <img
+            src="{{ url_for('static', path='images/Logo.png') }}"
+            alt="Logo"
+          />
+        </div>
+
+        <nav class="top-nav">
+          <ul>
+            <li class="dashboard" id="dashboard">
+              <a id="dashboard_label" href="{{ url_for('render_dashboard') }}"
+                >Dashboard</a
+              >
+            </li>
+            <li class="consultadoctor" id="consultadoctor">
+              <a
+                id="consultadoctor_label"
+                href="{{ url_for('render_consultdoctor') }}"
+                >Consult a Doctor</a
+              >
+            </li>
+            <li class="appointments" id="appointments">
+              <a
+                id="appointments_label"
+                href="{{ url_for('render_appointment') }}"
+                >Appointments</a
+              >
+            </li>
+            <li class="myhospital" id="myhospitals">
+              <a
+                id="myhospitals_label"
+                href="{{ url_for('render_myhospitals') }}"
+                >My Hospitals</a
+              >
+            </li>
+            <li class="myhospital" id="myhospitals">
+              <a
+                id="myhospitals_label"
+                href="{{ url_for('render_upload_form') }}"
+                >AI Diagnosis</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <nav class="bottom-nav">
+          <ul>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Refer Family & Friends</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Right Dashboard Information -->
+
+      <div class="main-content">
+        <div class="top-bar">
+          <div>
+            <input
+              type="search"
+              id="searchInput"
+              placeholder="Search here..."
+              aria-label="Search"
+            />
+          </div>
+
+          <div class="profile">
+            <img
+              src="{{ url_for('static', path='images/profile.jpg') }}"
+              alt="Profile Picture"
+            />
+          </div>
+          <div>
+            <img
+              src="{{ url_for('static', path='images/notification-icon.png') }}"
+              alt="Notifications"
+              class="notification-icon"
+            />
+          </div>
+        </div>
+
+        <div class="nav-header">
+          <a href="">
+            <button class="back-button">< Back</button>
+          </a>
+          <div class="header-title">
+            <span class="plus-icon">+</span>
+            Appointment / <b> Doctor's Profile </b>
+          </div>
+          <div class="header-actions">
+            <button class="sea{{ url_for('render_newappointment') }}rch-button">
+              Search
+            </button>
+            <button class="filter-button">≡ Filter</button>
+          </div>
+        </div>
+
+        <!-- Start of profile container -->
+        <div class="profile-container">
+          <!-- Start of profile header -->
+          <div class="profile-header">
+            <img
+              src="{{ url_for('static', path='images/Avatar.png') }}"
+              alt="Doctor Photo"
+              class="doctor-photo"
+            />
+
+            <!-- Start of profile info -->
+            <div class="profile-info">
+              <h1>Ndinelao Iitumba</h1>
+              <div class="ratings">
+                <span>★★★★★</span>
+              </div>
+              <p>General Practitioner</p>
+            </div>
+            <!-- End of profile info -->
+
+            <a href="{{ url_for('render_bookappointment') }}">
+              <button class="request-button">Book Appointment</button>
+            </a>
+          </div>
+          <!-- End of profile header -->
+
+          <!-- Start of profile body -->
+          <div class="profile-body">
+            <h2>Biography</h2>
+            <p>
+              Dr. Ndinelao Iitumba is a dedicated and compassionate General
+              Practitioner with over a decade of experience in delivering
+              high-quality primary care to a diverse patient population. A
+              graduate of a prestigious medical school, Ndinelao Iitumba
+              completed her residency in family medicine, where she honed her
+              skills in diagnosing and managing a wide range of acute and
+              chronic medical conditions. Currently based in [City/Location],
+              Ndinelao Iitumba is committed to the well-being of her patients,
+              emphasizing preventive care and the importance of lifestyle
+              modifications in promoting health and preventing disease. Her
+              approach to patient care is holistic and patient-centered,
+              ensuring that each patient feels heard and valued during their
+              consultation. Ndinelao Iitumba is actively involved in community
+              health initiatives and often participates in health education
+              programs to increase health awareness in underserved communities.
+              Her professional affiliations include memberships in several
+              national medical associations, through which she stays updated
+              with the latest advancements in general practice. In her practice,
+              Ndinelao Iitumba utilizes a combination of best clinical
+              practices, emerging medical research, and innovative technology to
+              provide optimal health outcomes for her patients. She is
+              particularly interested in areas of preventive medicine, women’s
+              health, and geriatrics. Outside of her medical practice, Ndinelao
+              Iitumba enjoys mentoring young medical professionals and
+              volunteers her time at local schools promoting careers in
+              healthcare. Her dedication to medicine and her community has
+              earned her respect and admiration from both her peers and her
+              patients.
+            </p>
+
+            <!-- Start of profile sections -->
+            <div class="profile-sections">
+              <!-- Start of hobbies section -->
+              <div class="profile-section">
+                <h3>Education</h3>
+                <ul>
+                  <li>Bachelor of Science in Biomedical Sciences</li>
+                  <li>Graduated: 2010</li>
+                  <li>Graduated Summa Cum Laude</li>
+                </ul>
+              </div>
+              <!-- End of hobbies section -->
+
+              <!-- Start of speciality section -->
+              <div class="profile-section">
+                <h3>Medical specialties</h3>
+                <ul>
+                  <li>Geriatric Medicine</li>
+                  <li>Obstetrics and Gynecology</li>
+                  <li>Public Health</li>
+                  <li>Preventive Medicine</li>
+                </ul>
+              </div>
+
+              <div class="profile-section">
+                <h3>Interest and Activities</h3>
+                <ul>
+                  <li>Gardening</li>
+                  <li>Yoga and Meditation:</li>
+                  <li>Health Blogging</li>
+                  <li>Volunteer Mentoring</li>
+                </ul>
+              </div>
+
+              <!-- End of speciality section -->
+            </div>
+            <!-- End of profile sections -->
+          </div>
+          <!-- End of profile body -->
+        </div>
+        <!-- End of profile container -->
+      </div>
+    </div>
+  </body>
+</html>

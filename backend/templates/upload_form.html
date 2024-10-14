@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="/static/css/style.css" /> -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', path='css/upload_form.css') }}"
+    />
+    <title>Fundus Disease Diagnosis</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Left Sidebar Navigation -->
+      <div class="sidebar">
+        <div class="logo">
+          <img
+            src="{{ url_for('static', path='images/Logo.png') }}"
+            alt="Logo"
+          />
+        </div>
+
+        <nav class="top-nav">
+          <ul>
+            <li class="dashboard" id="dashboard">
+              <a id="dashboard_label" href="{{ url_for('render_dashboard') }}"
+                >Dashboard</a
+              >
+            </li>
+            <li class="consultadoctor" id="consultadoctor">
+              <a
+                id="consultadoctor_label"
+                href="{{ url_for('render_consultdoctor') }}"
+                >Consult a Doctor</a
+              >
+            </li>
+            <li class="appointments" id="appointments">
+              <a
+                id="appointments_label"
+                href="{{ url_for('render_appointment') }}"
+                >Appointments</a
+              >
+            </li>
+            <li class="myhospital" id="myhospitals">
+              <a
+                id="myhospitals_label"
+                href="{{ url_for('render_myhospitals') }}"
+                >My Hospitals</a
+              >
+            </li>
+            <li class="myhospital" id="myhospitals">
+              <a
+                id="myhospitals_label"
+                href="{{ url_for('render_upload_form') }}"
+                >AI Diagnosis</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <nav class="bottom-nav">
+          <ul>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Refer Family & Friends</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Right Dashboard Information -->
+      <div class="main-content">
+        <div class="top-bar">
+          <div>
+            <input
+              type="search"
+              id="searchInput"
+              placeholder="Search here..."
+              aria-label="Search"
+            />
+          </div>
+
+          <div class="profile">
+            <img
+              src="{{ url_for('static', path='images/profile.jpg') }}"
+              alt="Profile Picture"
+            />
+          </div>
+          <div>
+            <img
+              src="{{ url_for('static', path='images/notification-icon.png') }}"
+              alt="Notifications"
+              class="notification-icon"
+            />
+          </div>
+        </div>
+      <div class="upload-section">
+        <h1>Fundus Disease Diagnosis</h1>
+        <form action="/predict" method="post" enctype="multipart/form-data">
+          <input
+            type="file"
+            id="imageUpload"
+            name="file"
+            accept="image/*"
+            required
+          />
+          <a href="/diagnosis"></a>
+          <button type="submit">Upload Image</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

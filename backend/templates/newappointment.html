@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/frontend/css/newappointment.css">
+    <link
+    rel="stylesheet"
+    href="{{ url_for('static', path='css/newappointment.css') }}"
+  />
 </head>
 <body>
     <div class="dashboard-container">
@@ -12,21 +15,46 @@
         <!-- Left Sidebar Navigation -->
         <div class="sidebar">
             <div class="logo">
-                <img src="/images/Logo.png" alt="Logo">
+                <img src="{{ url_for('static', path='images/Logo.png') }}" alt="Logo">
             </div>
     
             <nav class="top-nav">
                 <ul>
-                    <li class="dashboard" id="dashboard"><a id="dashboard_label" href="/frontend/html/dashboard.html">Dashboard</a></li>
-                    <li class="consultadoctor" id="consultadoctor"><a id="consultadoctor_label"
-                            href="/frontend/html/consultdoctor.html">Consult a Doctor</a></li>
-                    <li class="appointments" id="appointments"><a id="appointments_label"
-                            href="/frontend/html/appointment.html">Appointments</a></li>
-                    <li class="myhospital" id="myhospitals"><a id="myhospitals_label" href="/frontend/html/myhospitals.html">My
-                            Hospitals</a></li>
-                            <li class="myhospital" id="myhospitals"><a id="myhospitals_label" href="/frontend/html/diagnosis.html">AI Diagnosis</a></li>
+                  <li class="dashboard" id="dashboard">
+                    <a id="dashboard_label" href="{{ url_for('render_dashboard') }}"
+                      >Dashboard</a
+                    >
+                  </li>
+                  <li class="consultadoctor" id="consultadoctor">
+                    <a
+                      id="consultadoctor_label"
+                      href="{{ url_for('render_consultdoctor') }}"
+                      >Consult a Doctor</a
+                    >
+                  </li>
+                  <li class="appointments" id="appointments">
+                    <a
+                      id="appointments_label"
+                      href="{{ url_for('render_appointment') }}"
+                      >Appointments</a
+                    >
+                  </li>
+                  <li class="myhospital" id="myhospitals">
+                    <a
+                      id="myhospitals_label"
+                      href="{{ url_for('render_myhospitals') }}"
+                      >My Hospitals</a
+                    >
+                  </li>
+                  <li class="myhospital" id="myhospitals">
+                    <a
+                      id="myhospitals_label"
+                      href="{{ url_for('render_upload_form') }}"
+                      >AI Diagnosis</a
+                    >
+                  </li>
                 </ul>
-            </nav>
+              </nav>
             <nav class="bottom-nav">
                 <ul>
                     <li><a href="#">Settings</a></li>
@@ -45,16 +73,16 @@
                 </div>
 
                 <div class="profile">
-                <img src="/images/profile.jpg" alt="Profile Picture">
+                <img src="{{ url_for('static', path='images/profile.jpg') }}" alt="Profile Picture">
                 </div>
 
                 <div>
-                <img src="/images/notification-icon.png" alt="Notifications" class="notification-icon">
+                <img src="{{ url_for('static', path='images/notification-icon.png') }}" alt="Notifications" class="notification-icon">
                 </div>    
             </div>
 
             <div class="nav-header">
-                <a href="/frontend/html/appointment.html">
+                <a href="{{ url_for('render_newappointment') }}">
                     <button class="back-button"> < Back</button>
                 </a>
             
@@ -86,7 +114,7 @@
                     <tr onclick="window.location.href='doctorprofile(appointment).html'">
                         <td>
                             <div class="doctor-info">
-                                <img src="/images/Avatar.png" alt="Dr. Alison Ogaga">
+                                <img src="{{ url_for('static', path='images/Avatar.png') }}" alt="Dr. Alison Ogaga">
                                 <div>
                                     <p>Dr. Ndinelao Iitumba</p>
                                     <p>General Practitioner</p>
@@ -104,7 +132,7 @@
                     <tr onclick="window.location.href='doctorprofile(appointment).html'">
                         <td>
                             <div class="doctor-info">
-                                <img src="/images/Avatar.png" alt="Dr. Jennifer Johnson">
+                                <img src="{{ url_for('static', path='images/Avatar.png') }}" alt="Dr. Jennifer Johnson">
                                 <div>
                                     <p>Dr. Ndinelao Iitumba</p>
                                     <p>Primary Care Physician</p>
@@ -123,7 +151,7 @@
                     <tr onclick="window.location.href='doctorprofile(appointment).html'">
                         <td>
                             <div class="doctor-info">
-                                <img src="/images/Avatar.png" alt="Dr. Jennifer Johnson">
+                                <img src="{{ url_for('static', path='images/Avatar.png') }}" alt="Dr. Jennifer Johnson">
                                 <div>
                                     <p>Dr. Ndinelao Iitumba</p>
                                     <p>Primary Care Physician</p>
@@ -139,7 +167,7 @@
                         <td><button class="request-button">View Profile</button></td>
                     </tr>
 
-                    <tr onclick="window.location.href='/frontend/html/doctorprofile(appointment).html'">
+                    <tronclick="window.location.href='{{ url_for('render_doctorprofileappointment') }}'">
                         <td>
                             <div class="doctor-info">
                                 <img src="" alt="Dr. Jennifer Johnson">
