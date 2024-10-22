@@ -106,7 +106,33 @@
           <a href="/diagnosis"></a>
           <button type="submit">Upload Image</button>
         </form>
+        <p id="uploadStatus"></p> <!-- Placeholder for uploading status -->
       </div>
     </div>
+    <script>
+      const form = document.getElementById("uploadForm");
+      const uploadBtn = document.getElementById("uploadBtn");
+      const statusText = document.getElementById("uploadStatus");
+
+      // Function to show uploading status
+      function showUploadingStatus() {
+        let dots = 0;
+        return setInterval(() => {
+          dots = (dots + 1) % 4;
+          statusText.textContent = 'Uploading' + '.'.repeat(dots);
+        }, 500);
+      }
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const intervalId = showUploadingStatus();
+
+        setTimeout(function () {
+        clearInterval(intervalId); // Stop "Uploading..." animation
+        statusText.textContent = ''; // Clear the status message
+    }, 30000);
+      });
+    </script>
   </body>
 </html>

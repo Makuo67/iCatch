@@ -1,4 +1,5 @@
 import requests
+import re
 from groq import Client
 
 GROQ_API_KEY = "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"
@@ -34,7 +35,7 @@ def get_text_explanation(predicted_class):
         # Send a chat completion request using Groq's client
         chat_completion = client.chat.completions.create(
             messages=[{"role": "user", "content": prompt}],
-            model="llama-3.1-8b-instant",  # Example model, ensure the correct one is used
+            model="llama-3.1-70b-versatile",  # Llama model
         )
 
         # Extract the response text from the chat completion

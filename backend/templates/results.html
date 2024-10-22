@@ -10,19 +10,134 @@
     />
   </head>
   <body>
-    <h1>Diagnosis Result</h1>
-    <h2>Diagnosis: {{ prediction }}</h2>
-    Jinaj
-    <div>
-      <h3>Original Image</h3>
-      <img src="{{ original_image }}" alt="Original Image" />
+    <div class="results-container">
+      <!-- Left Sidebar Navigation -->
+      <div class="sidebar">
+        <div class="logo">
+          <img
+            src="{{ url_for('static', path='images/Logo.png') }}"
+            alt="Logo"
+          />
+        </div>
+
+        <nav class="top-nav">
+          <ul>
+            <li class="dashboard" id="dashboard">
+              <a id="dashboard_label" href="{{ url_for('render_dashboard') }}"
+                >Dashboard</a
+              >
+            </li>
+            <li class="consultadoctor" id="consultadoctor">
+              <a
+                id="consultadoctor_label"
+                href="{{ url_for('render_consultdoctor') }}"
+                >Consult a Doctor</a
+              >
+            </li>
+            <li class="appointments" id="appointments">
+              <a
+                id="appointments_label"
+                href="{{ url_for('render_appointment') }}"
+                >Appointments</a
+              >
+            </li>
+            <li class="myhospital" id="myhospitals">
+              <a
+                id="myhospitals_label"
+                href="{{ url_for('render_myhospitals') }}"
+                >My Hospitals</a
+              >
+            </li>
+            <li class="myhospital" id="myhospitals">
+              <a
+                id="myhospitals_label"
+                href="{{ url_for('render_upload_form') }}"
+                >AI Diagnosis</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <nav class="bottom-nav">
+          <ul>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Refer Family & Friends</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Right Dashboard Information -->
+      <div class="main-content">
+        <div class="top-bar">
+          <div>
+            <input
+              type="search"
+              id="searchInput"
+              placeholder="Search here..."
+              aria-label="Search"
+            />
+          </div>
+
+          <div class="profile">
+            <img
+              src="{{ url_for('static', path='images/profile.jpg') }}"
+              alt="Profile Picture"
+            />
+          </div>
+          <div>
+            <img
+              src="{{ url_for('static', path='images/notification-icon.png') }}"
+              alt="Notifications"
+              class="notification-icon"
+            />
+          </div>
+        </div>
+      <div class="heading">
+        <h2>Diagnosis: {{ prediction }}</h2>
+      </div>
+      <div class="image-section">
+        <div class="image-container">
+          <h3>Original Image</h3>
+          <img src="{{ original_image }}" alt="Original Image" />
+        </div>
+        <div class="image-container">
+          <h3>GradCAM++ Image</h3>
+          <img src="{{ gradcam_image }}" alt="GradCAM++ Image" />
+        </div>
+      </div>
+      <div class="explanation" >
+        <h3>AI Explanation:</h3>
+        <div id="markdown-container">
+          <textarea id="explanationInput" style="display: none;">{{ explanation | safe }}</textarea>
+        </div>
+        
+      </div>
+      <div class="redirect">
+        <a href="{{ url_for('render_upload_form') }}">Upload another image</a>
+      </div>
     </div>
-    <div>
-      <h3>GradCAM++ Image</h3>
-      <img src="{{ gradcam_image }}" alt="GradCAM++ Image" />
-    </div>
-    <h3>AI Explanation:</h3>
-    <p>{{ explanation }}</p>
-    <a href="/">Upload another image</a>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const explanationText = document.getElementById('explanationInput').value;
+        const markdownContainer = document.getElementById('markdown-container');
+        
+        if (explanationText) {
+          markdownContainer.innerHTML = marked.parse(explanationText);
+    
+          // Add classes to enhance styling
+          const headings = markdownContainer.querySelectorAll('h1, h2, h3, h4, h5, h6');
+          headings.forEach(heading => heading.classList.add('explanation-heading'));
+    
+          const lists = markdownContainer.querySelectorAll('ul, ol');
+          lists.forEach(list => list.classList.add('explanation-list'));
+    
+          const listItems = markdownContainer.querySelectorAll('li');
+          listItems.forEach(item => item.classList.add('explanation-list-item'));
+        } else {
+          markdownContainer.innerHTML = '<p>No explanation available.</p>';
+        }
+      });
+    </script>
   </body>
 </html>
